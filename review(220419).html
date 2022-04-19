@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <style>
+        #title{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        #wrap{
+            width: 1500px;
+            height: 600px;
+            background-color: aliceblue;
+        }
+        #row1{
+            width: 1500px;
+            height: 300px;
+            background-color: aliceblue;
+        }
+        #row1>#r1c1{
+            width: 500px;
+            height: 300px;
+            background-color: aliceblue;
+            float: left;
+        }
+        #row1>#r1c2{
+            width: 500px;
+            height: 300px;
+            background-color: aquamarine;
+            float: left;
+        }
+        #row1>#r1c3{
+            width: 500px;
+            height: 300px;
+            background-color: aqua;
+            float: left;
+        }
+        #row2{
+            width: 1500px;
+            height: 300px;
+            background-color: aliceblue;
+        }
+        #row2>#r2c1{
+            width: 500px;
+            height: 300px;
+            background-color: beige;
+            float: left;
+        }
+        #row2>#r2c2{
+            width: 500px;
+            height: 300px;
+            background-color: bisque;
+            float: left;
+        }
+        #row2>#r2c3{
+            width: 500px;
+            height: 300px;
+            background-color: burlywood;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">4월 셋째주에 배운 개념들</h1>
+    <div id="wrap">
+        <div id="row1">
+            <div id="r1c1">
+                <h3 id="title">b태그와 em태그</h3>
+                <p>
+                    <b>글씨를 "진하게" 설정했습니다.</b>
+                    <br>
+                    <em>글씨를 "강조하여" 설정했습니다.</em>
+                </p>
+            </div>
+            <div id="r1c2">
+                <h3 id="title">a태그와 img태그</h3>
+                <p>
+                    <a href="http://www.naver.com" title="네이버">네이버</a>
+                    <br>
+                    <img src="./220412/images/cat.jpg" alt="고양이" title="고양이">
+                </p>
+            </div>
+            <div id="r1c3">
+                <h3 id="title">a태그와 img태그 응용</h3>
+                <p>*이미지를 누르면 링크로 이동하게 만들기*</p>
+                <p>
+                    <a href="http://www.daum.net" title="다음"><img src="./220414/images/daum.png" alt="다음" style="width: 100px; height: 80px;"></a>
+                </p>
+            </div>
+        </div>
+        <div id="row2">
+            <div id="r2c1">
+                <h3 id="title">style 속성</h3>
+                <p>*style속성을 이용하여 이미지 크기, 글씨 크기, 글씨 색을 바꾸기*</p>
+                <p>
+                    <img src="./220412/images/chocolate.jpg" alt="초콜릿" style="width: 50px; height: 50px;">
+                </p>
+                <p style="color: blueviolet; font-size: 20px;">
+                    글씨의 색깔이 달라졌죠?
+                </p>
+            </div>
+            <div id="r2c2">
+                <h3 id="title">ol, ul, li태그</h3>
+                <p>ol: 순서가 있는 리스트 <br> ul: 순서가 없는 리스트</p>
+                <p>
+                    <ol>
+                        <li>인사와 이름 밝히기</li>
+                            <ul>
+                                <li>안녕하세요!</li>
+                                <li>저는 보라해바라기입니다.</li>
+                            </ul>
+                            <br>
+                        <li>직업 밝히기</li>
+                            <ul>
+                                <li>저는 현재 휴학생입니다.</li>
+                            </ul>
+                    </ol>
+                </p>
+            </div>
+            <div id="r2c3">
+                <h3 id="title">기타</h3>
+                <p>이 밖에도 h1~h6태그, div태그, div 속 id 속성, <br> style태그, br, p태그를 적용해봄.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
