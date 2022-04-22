@@ -1,0 +1,88 @@
+#wrap{
+    width: 1200px;
+    height: 700px;
+    background-color: aliceblue;
+}
+#header{
+    width: 1200px;
+    height: 100px;
+    background-color: aliceblue;
+}
+#header>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    float: left;
+}
+#header>#menu{
+    width: 1000px;
+    height: 100px;
+    background-color: rgb(110, 195, 223);
+    float: left;
+}
+#header>#menu>ul{
+    list-style-type: none;
+}
+#header>#menu>#gnb>li>a{ /*이거 우예 고쳐야함?*/
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    padding-top: 13px;
+    box-sizing: border-box;
+    text-decoration: none;
+    float: left;
+    margin-right: 30px;
+}
+#slide{
+    width: 1200px;
+    height: 300px;
+    background-color: aliceblue;
+}
+#contents{
+    width: 1200px;
+    height: 200px;
+    background-color: aliceblue;
+}
+#contents>#notice{
+    width: 430px;
+    height: 200px;
+    background-color: rgb(244, 204, 210);
+    float: left;
+}
+#contents>#gallery{
+    width: 430px;
+    height: 200px;
+    background-color: rgb(254, 164, 178);
+    float: left;
+}
+#contents>#banner{
+    width: 340px;
+    height: 200px;
+    background-color: rgb(255, 125, 144);
+    float: left;
+}
+#footer{
+    width: 1200px;
+    height: 100px;
+    background-color: aliceblue;
+}
+#footer>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(173, 197, 126);
+    float: left;
+}
+#footer>#copyright{
+    width: 800px;
+    height: 100px;
+    background-color: yellowgreen;
+    float: left;
+}
+#footer>#family{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(112, 157, 22);
+    float: left;
+}
