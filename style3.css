@@ -59,17 +59,22 @@
     background-color: beige;
     float: left;
 }
-#footer>#bottom{
+#footer>#footer-right{
     width: 1000px;
-    height: 50px;
-    background-color: burlywood;
+    height: 100px;
+    background-color: beige;
     float: left;
 }
-#footer>#copyright{
+#footer>#footer-right>#bottom-menu{
     width: 1000px;
     height: 50px;
-    background-color: darkgoldenrod;
-    float: left;
+    background-color: rgb(233, 233, 122);
 }
+#footer>#footer-right>#copyright{
+    width: 1000px;
+    height: 50px;
+    background-color: rgb(194, 194, 64);
+}
+
 /*남는 자리에 왼쪽을 기준으로 붙어야 함!
 그래서 float:left 붙여줘야 함.*/

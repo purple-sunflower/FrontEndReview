@@ -53,21 +53,25 @@
     height: 100px;
     background-color: aliceblue;
 }
-#footer>#familysite{
-    width: 200px;
-    height: 100px;
-    background-color: rgb(71, 240, 71);
-    float: right;
-}
-#footer>#bottom{
+#footer>#footer-left{
     width: 1000px;
-    height: 50px;
-    background-color: rgb(173, 242, 173);
+    height: 100px;
+    background-color: burlywood;
     float: left;
 }
-#footer>#copyright{
+#footer>#footer-left>#bottom-menu{
     width: 1000px;
     height: 50px;
-    background-color: rgb(114, 241, 114);
+    background-color: burlywood;
+}
+#footer>#footer-left>#copyright{
+    width: 1000px;
+    height: 50px;
+    background-color: rgb(223, 172, 106);
+}
+#footer>#family-site{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(222, 149, 53);
     float: left;
 }
