@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}/*이게 해결법!*/
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+#wrap{
+    width: 500px;
+    height: 250px;
+    /* background-color: aliceblue; */
+    border-radius: 20px;
+    margin-left: 10px;
+}
+#top{
+    width: 500px;
+    height: 70px;
+    /* background-color: aliceblue; */
+    border-radius: 20px;
+}
+#top>#title{ 
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+/*대표종이랑 더 보기 항목 한 줄에 정렬하는 방법..?*/
+/*margin과 padding값을 전체 항목에 0을 주니 해결!*/
+#top>#search>a{
+    float: right;
+    color: gray;
+    font-size: 20px;
+    margin-top: -30px;
+}
+#bottom{
+    width: 500px;
+    height: 180px;
+    /* background-color: aliceblue; */
+    border-radius: 20px;
+}
+#bottom>#gnb>li{
+    float: left;
+    margin-right: 25px;
+}

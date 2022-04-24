@@ -1,0 +1,61 @@
+#wrap{
+    width: 700px;
+    height: 1200px;
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+#wrap2{
+    width: 650px;
+    height: 1200px;
+    background-color: lightpink;
+    border-radius: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+img{
+    width: 150px;
+    height: 100px;
+    margin: 30px;
+    margin-bottom: 0px;
+    float: left;
+    border-radius: 20px;
+}
+ul{
+    color: ivory;
+    float: left;
+}
+#wrap2>#korea{
+    width: 450px;
+    height: 200px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    margin: 30px;
+}
+#wrap2>#greece{
+    width: 450px;
+    height: 200px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    margin: 30px;
+}
+#wrap2>#spain{
+    width: 450px;
+    height: 200px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    margin: 30px;
+}
+#wrap2>#japan{
+    width: 450px;
+    height: 200px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    margin: 30px;
+}
+#wrap2>#india{
+    width: 450px;
+    height: 200px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    margin: 30px;
+}
