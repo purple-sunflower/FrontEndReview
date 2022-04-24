@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review(220424)</title>
+    <link rel="stylesheet" href="./css/review.css">
+</head>
+<body>
+    <h1 id="title">4월 넷째주 개념</h1>
+    <div id="wrap">
+        <div id="r1">
+            <div id="cont1">
+                <h3>div와 span</h3>
+                <div id="div1">
+                    보라해바라기
+                </div>
+                <span id="span">
+                    보라해바라기
+                </span>
+            </div>
+            <div id="cont2">
+               <h3>menu 만들기</h3> 
+               <ul id="gnb">
+                   <li><a href="#">보라</a></li>
+                   <li><a href="#">해바</a></li>
+                   <li><a href="#">라기</a></li>
+               </ul>
+            </div>
+            <div id="cont3">
+                <h3>input, form, label 이용한 로그인 창</h3>
+                <form action="checkLogin.jsp" method="get">
+                    <label for="id">ID:</label>
+                    <input type="text" placeholder="아이디를 입력해주세요" id="id">
+                    <br>
+                    <label for="pw">PW:</label>
+                    <input type="password" placeholder="비밀번호를 입력해주세요" id="pw">
+                    <br>
+                    <input type="submit" value="로그인">
+                </form>
+            </div>
+        </div>
+        <div id="r2">
+            <div id="cont1">
+                <h3>table</h3>
+                <table border="1"> <!--경계선-->
+                    <tr>
+                        <th></th>
+                        <th>이름(가명)</th>
+                        <th>성별</th>
+                        <th>직업</th>
+                    </tr>
+                    <tr>
+                        <td>프론트엔드</td>
+                        <td>보라해바라기</td>
+                        <td>여</td>
+                        <td>대학생</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>홍길동</td>
+                        <td>남</td>
+                        <td>직장인</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="cont2">
+                <h3>div 이용한 원 만들기</h3>
+                <div id="signal-light">
+                    <div id="red">
+                        멈춤
+                    </div>
+                    <div id="yellow">
+                        대기
+                    </div>
+                    <div id="green">
+                        출발
+                    </div>
+                </div>
+            </div>
+            <div id="cont3">
+                <h3>audio, video, embed</h3>
+                <audio src="./audio/piano.mp3" controls></audio>
+                <br>
+                <video src="./video/mov_bbb.mp4" controls width="150px" height="75px"></video>
+                <embed src="./video/swiss (convert-video-online.com).mp4" controls width="150px" height="75px">
+            </div>
+        </div>
+        <div id="r3">
+            <div id="cont1">
+                <h3>embed 이용해 유튜브 삽입</h3>
+                <embed src="https://www.youtube.com/embed/5ch94AaPZRQ" type="video/mp4">
+            </div>
+            <div id="cont2">
+                <h3>embed 이용해 유튜브 삽입 (조건 주기)</h3>
+                <embed src="https://www.youtube.com/v/ImapK-6lOvA&autoplay=1&start=60" type="video/mp4">
+                    <p>조건: 자동 재생, 60초부터 영상 시작</p>
+            </div>
+            <div id="cont3">
+                <h3>iframe 사용해 유튜브 삽입</h3>
+                <iframe width="320" height="180" 
+                src="https://www.youtube.com/embed/t0hpHa670mc" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+                <!--allowfullsceen: 전체화면 가능-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
