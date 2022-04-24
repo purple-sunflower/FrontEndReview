@@ -1,0 +1,155 @@
+@charset "utf-8"; /*인코딩 방식 설정*/
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+#title{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+#wrap{
+    width: 1200px;
+    height: 700px;
+    background-color: aliceblue;
+}
+#r1{
+    width: 1200px;
+    height: 150px;
+    background-color: aliceblue;
+}
+#r1>#cont1{
+    width: 400px;
+    height: 150px;
+    background-color: aliceblue;
+    float: left;
+}
+#r1>#cont1>#div1{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    display: inline-block;
+}
+#r1>#cont1>#span{
+    width: 100px;
+    height: 100px;
+    background-color: lightskyblue;
+}
+#r1>#cont2{
+    width: 400px;
+    height: 150px;
+    background-color: aliceblue;
+    float: left;
+}
+#r1>#cont2>#gnb>li{
+    float: left;
+}
+#r1>#cont2>#gnb>li>a{
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: lightgreen;
+    
+    text-align: center;
+    padding-top: 15px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+#r1>#cont3{
+    width: 400px;
+    height: 150px;
+    background-color: aliceblue;
+    float: left;
+}
+#r2{
+    width: 1200px;
+    height: 200px;
+    background-color: aliceblue;
+}
+#r2>#cont1{
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+    float: left;
+}
+#r2>#cont2{
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+    float: left;
+}
+#r2>#cont2>#signal-light{
+    width: 350px;
+    height: 130px;
+    background-color: lightgray;
+    padding-top: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+#r2>#cont2>#signal-light>#red{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: red;
+    float: left;
+    margin-right: 10px;
+
+    text-align: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+#r2>#cont2>#signal-light>#yellow{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: yellow;
+    float: left;
+    margin-right: 10px;
+
+    text-align: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+#r2>#cont2>#signal-light>#green{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: green;
+    float: left;
+
+    text-align: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+#r2>#cont3{
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+    float: left;
+}
+#r3{
+    width: 1200px;
+    height: 350px;
+    background-color: aliceblue;
+}
+#r3>#cont1{
+    width: 400px;
+    height: 350px;
+    background-color: aliceblue;
+    float: left;
+}
+#r3>#cont2{
+    width: 400px;
+    height: 350px;
+    background-color: aliceblue;
+    float: left;
+}
+#r3>#cont3{
+    width: 400px;
+    height: 350px;
+    background-color: aliceblue;
+    float: left;
+}
