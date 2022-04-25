@@ -1,3 +1,14 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding-left: 0;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
 #wrap{
     width: 1200px;
     height: 700px;
@@ -19,6 +30,26 @@
     height: 100px;
     background-color: salmon;
     float: left;
+}
+#header>#menu>#gnb{
+    width: 600px;
+    height: 50px;
+    background-color: rgb(241, 185, 179);
+    float: right;
+    margin-top: 25px;
+}
+#header>#menu>#gnb>li{
+    float: left;
+}
+#header>#menu>#gnb>li>a{
+    display: block; /*크기 지정을 위해 넣기!!*/
+    width: 150px;
+    height: 50px;
+    background-color: rgb(241, 185, 179);
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
 }
 #slide{
     width: 1200px;
