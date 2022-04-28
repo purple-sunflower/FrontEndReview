@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#wrap{
+    width: 1200px;
+    height: 650px;
+    background-color: aliceblue;
+}
+
+#left-side{
+    width: 200px;
+    height: 650px;
+    background-color: aliceblue;
+    float: left;
+}
+#left-side>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+#left-side>#menu{
+    width: 200px;
+    height: 550px;
+    background-color: rgb(249, 213, 166);
+}
+#left-side>#menu>#gnb{ /*색깔을 맞추면 상관없는데 음 뭔가 이상해*/
+    width: 150px;
+    height: 200px;
+    background-color: rgb(102, 77, 45);
+    padding: 20px;
+    box-sizing: border-box;
+}
+#left-side>#menu>#gnb>li>a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: antiquewhite;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#right-side{
+    width: 1000px;
+    height: 650px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#right-side>#slide{
+    width: 1000px;
+    height: 350px;
+    background-color: aliceblue;
+}
+
+#right-side>#contents{
+    width: 1000px;
+    height: 200px;
+    background-color: aliceblue;
+}
+#right-side>#contents>#cont1{
+    width: 350px;
+    height: 200px;
+    background-color: rgb(249, 179, 154);
+    float: left;
+}
+#right-side>#contents>#cont2{
+    width: 350px;
+    height: 200px;
+    background-color: rgb(247, 143, 105);
+    float: left;
+}
+#right-side>#contents>#cont3{
+    width: 300px;
+    height: 200px;
+    background-color: coral;
+    float: left;
+}
+
+#right-side>#footer{
+    width: 1000px;
+    height: 100px;
+    background-color: aliceblue;
+}
+
+#right-side>#footer>#copyright{
+    width: 800px;
+    height: 100px;
+    background-color: rgb(156, 226, 156);
+    float: left;
+}
+
+#right-side>#footer>#footer-right{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    float: left;
+}
+#right-side>#footer>#footer-right>#sns{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(26, 181, 26);
+    float: left;
+}
+#right-side>#footer>#footer-right>#family-site{
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    float: left;
+}
