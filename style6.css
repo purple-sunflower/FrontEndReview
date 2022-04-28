@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#wrap{
+    width: 1200px;
+    height: 700px;
+    background-color: aliceblue;
+}
+
+#header{
+    width: 1200px;
+    height: 100px;
+    background-color: aliceblue;
+}
+#header>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: antiquewhite;
+    float: left;
+}
+#header>#menu{
+    width: 1000px;
+    height: 100px;
+    background-color: rgb(251, 210, 158);
+    float: left;
+}
+#header>#menu>#gnb{
+    width: 600px;
+    height: 50px;
+    background-color: antiquewhite;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+#header>#menu>#gnb>li{
+    float: left;
+}
+#header>#menu>#gnb>li>a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: antiquewhite;
+    text-align: center;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+
+#slide{
+    width: 1200px;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+#contents{
+    width: 1200px;
+    height: 200px;
+    background-color: aliceblue;
+}
+#contents>#cont1{
+    width: 420px;
+    height: 200px;
+    background-color: pink;
+    float: left;
+}
+#contents>#cont2{
+    width: 420px;
+    height: 200px;
+    background-color: rgb(253, 175, 188);
+    float: left;
+}
+#contents>#cont3{
+    width: 360px;
+    height: 200px;
+    background-color: rgb(253, 153, 169);
+    float: left;
+}
+
+#footer{
+    width: 1200px;
+    height: 100px;
+    background-color: aliceblue;
+}
+#footer>#copyright{
+    width: 1000px;
+    height: 100px;
+    background-color: chartreuse;
+    float: left;
+}
+#footer>#footer-right{
+    width: 200px;
+    height: 100px;
+    background-color: chartreuse;
+    float: left;
+}
+#footer>#footer-right>#sns{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(172, 255, 89);
+    float: left;
+}
+#footer>#footer-right>#family-site{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(129, 208, 50);
+    float: left;
+}
