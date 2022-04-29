@@ -1,0 +1,143 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'dongdong';
+}
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'dongdong';
+    src: url("../fonts/Cafe24Dongdong.ttf");
+}
+
+#wrap{
+    width: 1470px;
+    height: 5250px;
+    background-color: antiquewhite;
+}
+
+#header{
+    width: 1470px;
+    height: 135px;
+    background-color: aqua;
+}
+
+#header>#disney{
+    width: 1470px;
+    height: 60px;
+    background-color: aliceblue;
+}
+
+#header>#disney>#logo{
+    width: 130px;
+    height: 60px;
+    background-color: #fff;
+    float: left;
+}
+
+#header>#disney>#logo>a>img{
+    width: 110px;
+    height: 60px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#header>#disney>#menu{
+    width: 550px;
+    height: 60px;
+    background-color: #fff;
+    float: left;
+    margin-right: 390px;
+}
+
+#header>#disney>#menu>#gnb{ /*굳이 있어야 함?*/
+    width: 550px;
+    height: 60px;
+    background-color: #fff;
+    float: left;
+}
+
+#header>#disney>#menu>#gnb>li{
+    float: left;
+}
+
+#header>#disney>#menu>#gnb>li>a{
+    display: block;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+    color: black;
+    font-weight: bold;
+}
+
+#header>#disney>#menu>#gnb>li>#menu1{
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    background-color: #fff;
+}
+
+#header>#disney>#menu>#gnb>li>#menu2{
+    width: 150px;
+    height: 60px;
+    background-color: #fff;
+}
+
+#header>#disney>#menu>#gnb>li>#menu3{
+    width: 100px;
+    height: 60px;
+    background-color: #fff;
+}
+
+#header>#disney>#menu>#gnb>li>#menu4{
+    width: 100px;
+    height: 60px;
+    background-color: #fff;
+}
+
+#header>#disney>#menu>#gnb>li>#menu5{
+    width: 100px;
+    height: 60px;
+    background-color: #fff;
+}
+
+#header>#disney>#search{
+    width: 400px;
+    height: 60px;
+    background-color: rgb(88, 88, 120);
+    float: left;
+}
+
+#header>#toystory{
+    width: 1470px;
+    height: 75px;
+    background-color: navy;
+}
+
+#header>#toystory>#logo{
+    width: 150px;
+    height: 75px;
+    background-color: brown;
+    float: left;
+    margin-right: 920px;
+}
+
+#header>#toystory>#menu{
+    width: 400px;
+    height: 75px;
+    background-color: coral;
+    float: left;
+}
+
+#contents{
+    width: 1470px;
+    height: 5000px;
+    background-color: cadetblue;
+}
