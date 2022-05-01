@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review(220501)</title>
+    <link rel="stylesheet" href="./css/review(220501).css">
+</head>
+<body>
+    <h1>4월 5째주 개념 정리</h1>
+    <div id="wrap">
+        <div id="r1">
+            <div id="c1">
+                <h4>margin과 padding + border-radius (시계방향 순, padding도 동일)</h4>
+                <div id="left">
+                    <div id="margin1">
+                        margin: 20px 
+                        <br>(전체 margin이 20px)
+                    </div>
+                    <div id="margin2">
+                        margin: 20px 40px
+                        <br>(위, 아래: 20 <br>좌, 우: 40)
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="margin3">
+                        margin: 20px 40px 60px
+                        <br>(위: 20, 좌, 우: 40, <br>아래: 60)
+                    </div>
+                    <div id="margin4">
+                        margin: 20px 40px 60px 80px
+                        <br>(위: 20, 우: 40, <br>아래: 60, 좌:80)
+                    </div>
+                </div>
+            </div>
+            <div id="c2">
+                <h4>relative (div 가로)</h4>
+                <div id="div1">
+                    1
+                </div>
+                <div id="div2">
+                    relative 
+                    <br>(top, left 30)
+                </div>
+                <div id="div3">
+                    3
+                </div>
+            </div>
+            <div id="c3">
+                <h4>relative (div 세로)</h4>
+                <div id="div1">
+                    1
+                </div>
+                <div id="div2">
+                    relative 
+                    <br>(top, left 30)
+                </div>
+                <div id="div3">
+                    3
+                </div>
+            </div>
+        </div>
+        <div id="r2">
+            <div id="c1">
+                <h4>absolute (부모 요소 기준점 X)</h4>
+                <div id="div1">
+                    div1
+                </div>
+                <div id="div2">
+                    <b>body</b>를 기준으로 정렬됨.
+                    <br>(top 300, left 20)
+                </div>
+                <div id="div3">
+                    div3
+                </div>
+            </div>
+            <div id="c2">
+                <h4>absolute (부모 요소 기준점 O)</h4>
+                <div id="div1">
+                    div1
+                </div>
+                <div id="div2">
+                    <b>c2(부모요소)</b>를 기준으로 정렬됨.
+                    <br>(top 70, left 70)
+                    <br>c2에 position:relative
+                </div>
+                <div id="div3">
+                    div3
+                </div>
+            </div>
+            <div id="c3">
+                <h4>폰트(ttf파일, link, import)</h4>
+                <div id="ttf">
+                    보라해바라기
+                </div>
+                <div>
+                    link, import는 html head에서 가능
+                </div>
+            </div>
+        </div>
+        <div id="r3">
+            <div id="c1">
+                <h4>팝업창 (relative)</h4>
+                <div id="contents">
+                    <div id="popup">
+                        popup
+                    </div>
+                    <div id="notice">
+                        <p>안녕하세요. 저는 보라해바라기입니다.</p>
+                        <p>제가 이 글을 쓰는 이유는 스크롤이 넘어가도록 하기 위해서입니다.</p>
+                        <p>제가 보여드리고 싶은 것은 팝업창을 relative로 설정했을 때, 
+                            팝업창이 고정되지 않고 움직이는 모습입니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="c2">
+                <h4>팝업창 (fixed)</h4>
+                <div id="contents">
+                    <div id="popup">
+                        popup
+                    </div>
+                    <div id="notice">
+                        <p>안녕하세요. 저는 보라해바라기입니다.</p>
+                        <p>제가 이 글을 쓰는 이유는 스크롤이 넘어가도록 하기 위해서입니다.</p>
+                        <p>제가 보여드리고 싶은 것은 팝업창을 fixed로 설정했을 때, 
+                            팝업창이 고정된 모습입니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="c3">
+                <h4>이미지 스프라이트</h4>
+                <div id="search"></div>
+                <br>
+                <div id="lock"></div>
+                <br>
+                <div id="gmarket-logo"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

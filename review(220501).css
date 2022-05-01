@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+@font-face{
+    src: url(../fonts/GmarketSansTTFLight.ttf);
+    font-family: 'gmarket-font';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h4{
+    text-align: center;
+}
+
+#wrap{
+    width: 1500px;
+    height: 750px;
+    background-color: aliceblue;
+}
+
+#wrap>#r1{
+    width: 1500px;
+    height: 250px;
+    background-color: aliceblue;
+}
+
+#wrap>#r1>#c1{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r1>#c1>#left{
+    width: 250px;
+    height: 200px;
+    background-color: lightpink;
+    float: left;
+    font-size: 10px;
+}
+
+#wrap>#r1>#c1>#left>#margin1{
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#wrap>#r1>#c1>#left>#margin2{
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    margin: 20px 40px;
+    border-radius: 10px;
+}
+
+#wrap>#r1>#c1>#right{
+    width: 250px;
+    height: 200px;
+    background-color: lightgreen;
+    float: left;
+    font-size: 10px;
+}
+
+#wrap>#r1>#c1>#right>#margin3{
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    margin: 20px 40px 60px;
+    border-radius: 10px;
+}
+
+#wrap>#r1>#c1>#right>#margin4{
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    margin: 20px 40px 60px 80px;
+    border-radius: 10px;
+}
+
+#wrap>#r1>#c2{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r1>#c2>div{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    float: left;
+}
+
+#wrap>#r1>#c2>#div2{
+    background-color: greenyellow;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+#wrap>#r1>#c3{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r1>#c3>div{
+    width: 100px;
+    height: 50px;
+    background-color: blueviolet;
+}
+
+#wrap>#r1>#c3>#div2{
+    background-color: greenyellow;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+#wrap>#r2{
+    width: 1500px;
+    height: 250px;
+    background-color: aliceblue;
+}
+
+#wrap>#r2>#c1{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r2>#c1>div{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    float: left;
+}
+
+#wrap>#r2>#c1>#div2{
+    background-color: greenyellow;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    font-size: 12px;
+}
+
+#wrap>#r2>#c2{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+    position: relative;
+}
+
+#wrap>#r2>#c2>div{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    float: left;
+}
+
+#wrap>#r2>#c2>#div2{
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    background-color: greenyellow;
+    font-size: 12px;
+}
+
+#wrap>#r2>#c3{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r2>#c3>div{
+    width: 150px;
+    height: 50px;
+    background-color: cadetblue;
+    margin: 10px;
+    color: antiquewhite;
+}
+
+#wrap>#r2>#c3>#ttf{
+    font-family: 'gmarket-font';
+    font-size: 20px;
+
+    padding-top: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+#wrap>#r3{
+    width: 1500px;
+    height: 250px;
+    background-color: aliceblue;
+}
+
+#wrap>#r3>#c1{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r3>#c1>#contents{
+    width: 450px;
+    height: 200px;
+    overflow: scroll;
+}
+
+#wrap>#r3>#c1>#contents>#popup{
+    width: 70px;
+    height: 70px;
+    background-color: chocolate;
+    margin: 20px;
+    float: left;
+    position: relative;
+}
+
+#wrap>#r3>#c1>#contents>#notice{
+    width: 300px;
+    height: 1000px;
+    background-color: bisque;
+    float: left;
+}
+
+#wrap>#r3>#c2{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r3>#c2>#contents{
+    width: 450px;
+    height: 200px;
+    overflow: scroll;
+}
+
+#wrap>#r3>#c2>#contents>#popup{
+    width: 70px;
+    height: 70px;
+    background-color: chocolate;
+    margin: 20px;
+    float: left;
+    position: fixed;
+}
+
+#wrap>#r3>#c2>#contents>#notice{
+    width: 300px;
+    height: 1000px;
+    background-color: bisque;
+    float: left;
+}
+
+#wrap>#r3>#c3{
+    width: 500px;
+    height: 250px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#wrap>#r3>#c3>#search{
+    width: 35px;
+    height: 40px;
+    background: url(../images/icon_set1.png) -82px -420px;
+}
+
+#wrap>#r3>#c3>#lock{
+    width: 25px;
+    height: 25px;
+    background: url(../images/icon_set1.png) -197px -141px;
+}
+
+#wrap>#r3>#c3>#gmarket-logo{
+    width: 350px;
+    height: 100px;
+    background: url(../images/sprite__common.png) 0px -560px;
+}
