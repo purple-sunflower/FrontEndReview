@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#wrap{
+    width: 1000px;
+    height: 650px;
+    background-color: aliceblue;
+}
+
+#left-side{
+    width: 200px;
+    height: 650px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#left-side>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: lightpink;
+}
+
+#left-side>#menu{
+    width: 200px;
+    height: 550px;
+    background-color: rgb(242, 124, 142);
+    padding: 25px;
+    box-sizing: border-box; 
+    /*위 두 줄로 메뉴 칸 자체를 중간으로 옮기기@*/
+    /*
+        Q. 9번에서는 같은 경우에 gnb에서 조정
+        여기는 왜 메뉴에서 조정?
+    */
+}
+
+#left-side>#menu>#gnb{
+    width: 150px;
+    height: 280px;
+    background-color: lightpink;
+}
+
+#left-side>#menu>#gnb>li>a{
+    display: block;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+/**/
+
+#right-side{
+    width: 800px;
+    height: 650px;
+    background-color: aliceblue;
+    float: left;
+}
+
+#right-side>#slide{
+    width: 800px;
+    height: 350px;
+    background-color: aliceblue;
+}
+
+#right-side>#contents{
+    width: 800px;
+    height: 200px;
+    background-color: aliceblue;
+}
+
+#right-side>#contents>#cont1{
+    width: 320px;
+    height: 200px;
+    background-color: rgb(206, 248, 142);
+    float: left;
+}
+
+#right-side>#contents>#cont2{
+    width: 240px;
+    height: 200px;
+    background-color: rgb(184, 251, 83);
+    float: left;
+}
+
+#right-side>#contents>#cont3{
+    width: 240px;
+    height: 200px;
+    background-color: rgb(155, 255, 5);
+    float: left;
+}
+
+#right-side>#footer{
+    width: 800px;
+    height: 100px;
+    background-color: aliceblue;
+}
+
+#right-side>#footer>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(251, 182, 97);
+    float: left;
+}
+
+#right-side>#footer>#footer-right{
+    width: 600px;
+    height: 100px;
+    background-color: rgb(251, 182, 97);
+    float: left;
+}
+
+#right-side>#footer>#footer-right>#bottom-menu{
+    width: 600px;
+    height: 50px;
+    background-color: orange;
+    float: left;
+}
+
+#right-side>#footer>#footer-right>#copyright{
+    width: 600px;
+    height: 50px;
+    background-color: darkorange;
+    float: left;
+}
