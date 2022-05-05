@@ -1,0 +1,14 @@
+#slide{
+    overflow: hidden;
+    /*사진 크기가 넘으면 안보이게*/
+}
+
+#slide-contents{
+    width: 1200px;
+    height: 900px;
+}
+
+#slide-contents>img{
+    display: block;
+    /*사진 틈 안보이게 함.*/
+}
