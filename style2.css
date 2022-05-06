@@ -31,25 +31,6 @@ a{
     background-color: rgb(110, 195, 223);
     float: left;
 }
-#header>#menu>#gnb{
-    width: 600px;
-    height: 50px;
-    background-color: lightgoldenrodyellow;
-    float: right;
-    margin-top: 50px;
-}
-#header>#menu>#gnb>li{
-    float: left;
-}
-#header>#menu>#gnb>li>a{ /*이거 우예 고쳐야함?*/
-    display: block;
-    width: 150px;
-    height: 50px;
-    background-color: lightgoldenrodyellow;
-    text-align: center;
-    padding-top: 15px;
-    box-sizing: border-box;
-}
 #slide{
     width: 1200px;
     height: 300px;
