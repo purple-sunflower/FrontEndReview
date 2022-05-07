@@ -1,0 +1,22 @@
+#popup{
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    background-color: chartreuse;
+    top: 100px;
+    left: 500px;
+    z-index: 3; 
+    /*다른 컨텐츠에 가리지 않도록*/
+}
+
+#popup>#popup-contents{
+    width: 500px;
+    height: 400px;
+    background-color: chocolate;
+}
+
+#popup>#popup-btn-area{
+    width: 500px;
+    height: 100px;
+    background-color: gold;
+}

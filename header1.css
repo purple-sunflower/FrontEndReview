@@ -16,18 +16,27 @@
     display: block; /*크기 지정을 위해 넣기!!*/
     width: 150px;
     height: 50px;
-    background-color: rgb(241, 185, 179);
+    background-color: #ffffff;
     text-align: center;
     padding-top: 10px;
     box-sizing: border-box;
+}
+
+#gnb li a:hover{
+    background-color: #222328;
+    color: #ffffff;
 }
 
 #lnb>li>a{
     display: block;
     width: 150px;
     height: 50px;
-    background-color: aquamarine;
+    background-color: #ffffff;
     text-align: center;
     padding-top: 10px;
     box-sizing: border-box;
+}
+
+#lnb{
+    display: none;
 }
