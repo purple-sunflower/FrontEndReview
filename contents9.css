@@ -1,0 +1,88 @@
+#cont1>#tab{
+    width: 315px;
+    height: 195px;
+    background-color: magenta;
+}
+
+#cont1>#tab>#tab-btn-area{
+    width: 310px;
+    height: 40px;
+    background-color: olive;
+}
+
+#cont1>#tab>#tab-btn-area>a{
+    display: block;
+    width: 90px;
+    height: 40px;
+    background-color: ivory;
+    float: left;
+    margin-left: 10px;
+
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#cont1>#tab>#tab-contents{
+    width: 310px;
+    height: 150px;
+    background-color: lightblue;
+}
+
+#cont1>#tab>#tab-contents>#notice{
+    width: 305px;
+    height: 145px;
+    background-color: orange;
+}
+
+#notice>ul>li>a{
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 5px;
+    background-color: aqua;
+}
+
+#notice>ul>li>a>span:first-child{
+    display: block;
+    width: 200px;
+    height: 30px;
+    background-color: chartreuse;
+    float: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#notice>ul>li>a>span:nth-child(2){
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: coral;
+    float: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#cont1>#tab>#tab-contents>#gallery{
+    width: 305px;
+    height: 145px;
+    background-color: orangered;
+    display: none;
+}
+
+
+#cont2>a>img{
+    width: 230px;
+    height: 190px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+#cont3>a>img{
+    width: 230px;
+    height: 190px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}

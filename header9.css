@@ -1,0 +1,29 @@
+#left-side>#logo>img{
+    position: relative;
+    top: 25px;
+    left: 20px;
+}
+
+#menu>#gnb>li>a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(193, 152, 231);
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+#lnb{
+    display: none;
+}
+
+#lnb>li>a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: lightgray;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
