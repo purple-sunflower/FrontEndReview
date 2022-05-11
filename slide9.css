@@ -1,0 +1,13 @@
+#slide-contents>img{
+    display: block;
+    width: 800px;
+    height: 350px;
+}
+
+#slide-contents>img:nth-child(2){
+    display: none;
+}
+
+#slide-contents>img:nth-child(3){
+    display: none;
+}

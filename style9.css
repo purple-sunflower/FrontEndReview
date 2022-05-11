@@ -1,110 +1,121 @@
 @charset "utf-8";
+
 *{
     margin: 0;
     padding: 0;
 }
+
 ul{
     list-style-type: none;
 }
+
 a{
     text-decoration: none;
 }
+
 #wrap{
     width: 1000px;
     height: 650px;
     background-color: aliceblue;
+    margin: 0 auto;
 }
+
 #left-side{
     width: 200px;
     height: 650px;
     background-color: aliceblue;
     float: left;
 }
+
 #left-side>#logo{
     width: 200px;
     height: 100px;
     background-color: rgb(193, 152, 231);
 }
+
 #left-side>#menu{
     width: 200px;
     height: 550px;
     background-color: rgb(177, 119, 232);
 }
+
 #left-side>#menu>#gnb{
     width: 150px;
     height: 200px;
     padding-top: 15px;
-    padding-left: 15px;
+    padding-left: 25px;
     box-sizing: border-box;
 }
-#left-side>#menu>#gnb>li>a{
-    display: block;
-    width: 150px;
-    height: 50px;
-    text-align: center;
-    background-color: rgb(193, 152, 231);
-    padding-top: 15px;
-    box-sizing: border-box;
-}
+
 #right-side{
     width: 800px;
     height: 650px;
     background-color: aliceblue;
     float: left;
 }
+
 #right-side>#slide{
     width: 800px;
     height: 350px;
     background-color: aliceblue;
     float: left;
 }
+
 #right-side>#contents{
     width: 800px;
     height: 200px;
     background-color: aliceblue;
     float: left;
 }
+
 #right-side>#contents>#cont1{
     width: 320px;
     height: 200px;
     background-color: pink;
     float: left;
 }
+
 #right-side>#contents>#cont2{
     width: 240px;
     height: 200px;
     background-color: rgb(253, 148, 166);
     float: left;
 }
+
 #right-side>#contents>#cont3{
     width: 240px;
     height: 200px;
     background-color: rgb(251, 122, 144);
     float: left;
 }
+
 #right-side>#footer{
     width: 800px;
     height: 100px;
     background-color: aliceblue;
     float: left;
 }
+
 #right-side>#footer>#logo{
     width: 200px;
     height: 100px;
     background-color: rgb(163, 225, 163);
     float: left;
 }
+
 #right-side>#footer>#footer-right{
     width: 600px;
     height: 100px;
     background-color: rgb(163, 225, 163);
     float: left;
 }
+
 #right-side>#footer>#footer-right>#bottom-menu{
     width: 600px;
     height: 50px;
     background-color: rgb(122, 233, 122);
 }
+
 #right-side>#footer>#footer-right>#copyright{
     width: 600px;
     height: 50px;

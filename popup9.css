@@ -1,0 +1,28 @@
+#popup{
+    position: fixed;
+    top: 50px;
+    left: 550px;
+    z-index: 3;
+}
+
+#popup-contents{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#popup-contents>img{
+    width: 473px;
+    height: 440px;
+}
+
+#popup-btn-area{
+    position: absolute;
+    top: 455px;
+    left: 455px;
+}
+
+#popup-btn-area>a>img{
+    width: 30px;
+    height: 30px;
+}
