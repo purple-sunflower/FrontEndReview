@@ -1,0 +1,103 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+#wrap{
+    width: 1000px;
+    height: 650px;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+#header{
+    width: 200px;
+    height: 650px;
+    background-color: olive;
+    float: left;
+}
+
+#header>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: orange;
+}
+
+#header>#menu{
+    width: 200px;
+    height: 550px;
+    background-color: violet;
+}
+
+#slide{
+    width: 800px;
+    height: 350px;
+    background-color: cadetblue;
+    float: left;
+}
+
+#contents{
+    width: 800px;
+    height: 200px;
+    background-color: salmon;
+    float: left;
+}
+
+#contents>#cont1{
+    width: 320px;
+    height: 200px;
+    background-color: skyblue;
+    float: left;
+}
+
+#contents>#cont2{
+    width: 240px;
+    height: 200px;
+    background-color: yellow;
+    float: left;
+}
+
+#contents>#cont3{
+    width: 240px;
+    height: 200px;
+    background-color: yellowgreen;
+    float: left;
+}
+
+#footer{
+    width: 800px;
+    height: 100px;
+    background-color: aqua;
+    float: left;
+}
+
+#footer>#logo{
+    width: 200px;
+    height: 100px;
+    background-color: brown;
+    float: left;
+}
+
+#footer>#copyright{
+    width: 400px;
+    height: 100px;
+    background-color: rgb(173, 111, 111);
+    float: left;
+}
+
+#footer>#familysite{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(137, 120, 120);
+    float: left;
+}

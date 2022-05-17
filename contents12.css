@@ -1,0 +1,71 @@
+#cont1>#tab-btn-area{
+    width: 315px;
+    height: 40px;
+    background-color: red;
+}
+
+#cont1>#tab-btn-area>ul>li>a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: aquamarine;
+
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#cont1>#tab-contents{
+    width: 315px;
+    height: 155px;
+    background-color: pink;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+#cont1>#tab-contents>ul>li>a{
+    display: block;
+    width: 310px;
+    height: 30px;
+    background-color: chartreuse;
+    margin-bottom: 5px;
+}
+
+#cont1>#tab-contents>ul>li>a>span:first-child{
+    width: 210px;
+    height: 30px;
+    background-color: cornflowerblue;
+    float: left;
+}
+
+#cont1>#tab-contents>ul>li>a>span:nth-child(2){
+    width: 95px;
+    height: 30px;
+    background-color: rgb(182, 201, 237);
+    float: left;
+}
+
+#cont2>#tab-btn-area{
+    width: 235px;
+    height: 40px;
+    background-color: darkgoldenrod;
+}
+
+#cont2>#tab-btn-area>ul>li>a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: chartreuse;
+
+    text-align: center;
+    margin-left: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#cont2>#tab-contents{
+    width: 235px;
+    height: 155px;
+    background-color: rgb(202, 181, 127);
+}
