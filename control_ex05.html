@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var gender = prompt("성별을 입력하세요.")
+        
+        var height = prompt("키를 입력하세요.")
+        height = parseFloat(height)
+        
+        var weight = prompt("체중을 입력하세요.")
+        weight = parseFloat(weight)
+        
+        var standard = 0
+        standard = parseFloat(standard)
+
+        if (gender == "남성"){
+            standard = (height-100)*0.9
+            if (weight>standard){
+                document.write((weight-standard) + "kg 만큼 더 감량하세요!", "<br>")
+            }
+            else if (weight==standard){
+                document.write("표준 체중입니다.", "<br>")
+            }
+            if (weight<standard){
+                document.write((standard-weight) + "kg 만큼 더 증량하세요!", "<br>")
+            }
+        }
+        else if (gender == "여성"){
+            standard = (height-100)*0.8
+            if (weight>standard){
+                document.write((weight-standard) + "kg 만큼 더 감량하세요!", "<br>")
+            }
+            else if (weight==standard){
+                document.write("표준 체중입니다.", "<br>")
+            }
+            if (weight<standard){
+                document.write((standard-weight) + "kg 만큼 더 증량하세요!", "<br>")
+            }
+        }
+        else{
+            document.write("성별을 정확히 다시 입력해주세요.", "<br>")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

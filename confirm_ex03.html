@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var question = confirm("회원가입을 하시겠습니까?")
+
+        if (question == true){
+            var id = prompt("아이디를 입력하세요.")
+            var pw = prompt("비밀번호를 입력하세요.")
+            if (id == pw) {
+                document.write("아이디랑 비밀번호가 같으면 안됩니다.", "<br>")
+            }
+            else {
+                document.write("ID: " + id, "<br>")
+                document.write("PW: " + pw, "<br>")
+            }
+        }
+        else {
+            document.write("종료!", "<br>")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

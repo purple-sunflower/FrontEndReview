@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var major = prompt("전공을 입력하세요.")
+        var point = prompt("이수학점을 입력하세요.")
+        point = parseInt(point)
+
+        if (major=="컴퓨터공학"){
+            if (point>=140){
+                document.write(major + "과 졸업 대상입니다.", "<br>")
+            }
+            else {
+                document.write(major + "과 이수 학점 부족!", "<br>")
+            }
+        }
+        else{
+            document.write("컴퓨터공학과가 아닙니다.")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
