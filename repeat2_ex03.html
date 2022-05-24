@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var height = prompt("삼각형 높이 입력")
+        height = parseInt(height)
+
+        var i = 1;
+
+        var star = "*"
+
+        while (i<=height){
+            var total = 2*i-1
+            document.write(star.repeat(total), "<br>") // repeat 함수 활용하여 문자 반복.
+            i++
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
