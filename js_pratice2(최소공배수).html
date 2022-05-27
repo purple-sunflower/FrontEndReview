@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = parseInt(prompt("첫번째 정수 입력"))
+        var b = parseInt(prompt("첫번째 정수 입력"))
+
+        function leastCommonMultiple(a, b) {
+            var divisor = 2
+            var total = 1
+
+            if (a>=b){
+                while (divisor<=b) {
+                    if (a%divisor == 0 && b%divisor==0){
+                        total *= divisor
+                        a /= divisor
+                        b /= divisor
+                        continue
+                    }
+                    divisor++
+                }
+                
+            }
+            else { // (a<b)
+                while (divisor<=a) {
+                    if (a%divisor == 0 && b%divisor==0){
+                        total *= divisor
+                        a /= divisor
+                        b /= divisor
+                        continue
+                    }
+                    divisor++
+                }
+            }
+            return (total * a * b)
+        }
+
+        var result = leastCommonMultiple(a, b)
+        document.write("최소공배수: " + result, "<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
