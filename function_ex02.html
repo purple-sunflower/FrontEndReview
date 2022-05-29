@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //로그인 기능 만들기
+        // 지정 id: hello    
+        // 지정 pw: javascript1234
+        function logIn(id, pw){
+            if (id == "hello"){
+                if (pw == "javascript1234"){
+                    return "로그인 성공!"
+                }
+                return "비밀번호를 다시 입력하세요."
+            }
+            else { // (id != "hello")
+            if (pw == "javascript1234"){
+                    return "아이디를 다시 입력하세요."
+                }
+                return "아이디와 비밀번호를 다시 입력하세요."
+            }
+        }
+
+        var a = prompt("아이디를 입력하세요.")
+        var b = (prompt("비밀번호를 입력하세요."))
+
+        var result = logIn(a, b)
+        document.write(result, "<br>")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

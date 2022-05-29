@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var sum = 0
+
+        function amicablePair(a, b) {
+            if (a>=b){
+                for (var i = 1; i < b; i++) {
+                    if (b%i == 0){
+                        sum+=i // b의 진약수의 합
+                        continue
+                    }
+                    continue
+                }
+
+                if (a==sum) {
+                    return a + "와 " + b + "는 친화수입니다."
+                }
+                return a + "와 " + b + "는 친화수가 아닙니다."
+            } 
+            else { // (a < b)
+                for (var i = 1; i < a; i++) {
+                    if (a%i == 0){
+                        sum+=i // a의 진약수의 합
+                        continue
+                    }
+                    continue
+                }
+                if (b==sum) {
+                    return a + "와 " + b + "는 친화수입니다."
+                }
+                return a + "와 " + b + "는 친화수가 아닙니다."
+            }
+        }
+
+        var num1 = parseInt(prompt("첫번째 숫자를 입력하세요"))
+        var num2 = parseInt(prompt("두번째 숫자를 입력하세요"))
+
+        var result = amicablePair(num1, num2)
+        document.write(result, "<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
