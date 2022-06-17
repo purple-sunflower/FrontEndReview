@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--이미지 스프라이트 사용-->
+    <style>
+        .bg_play{
+            width: 70px;
+            height: 65px;
+            background: url('../images/play_pause_img.png') -80px -36px; /* 왼, 위*/
+        }
+        .bg_pause{
+            width: 60px;
+            height: 60px;
+            background: url('../images/play_pause_img.png') -45px -115px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <script>
+        var result=null
+        function myFunc(){
+            result=$("#my-img").hasClass("bg_play")
+            if(result===true){
+                //오디오 중지!
+                $("#my-img").removeClass("bg_play")
+                $("#my-img").addClass("bg_pause")
+            }else{
+                $("#my-img").removeClass("bg_pause")
+                $("#my-img").addClass("bg_play")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myFunc()">
+        <div id="my-img" class="bg_play"></div>
+    </button>
+</body>
+</html>
