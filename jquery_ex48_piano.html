@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script>
+        var audio = new Audio(); // 오디오 객체 생성
+        var audioList = [
+        "../audio/1_do.wav", "../audio/2_re.wav", 
+        "../audio/3_mi.wav", "../audio/4_pa.wav",
+        "../audio/5_sol.wav", "../audio/6_ra.wav",
+        "../audio/7_si.wav", "../audio/8_do.wav"
+        ]
+        var idx = 0
+        audio.src = audioList[idx] // 배열 0번째에 음악 세팅
+        // 오디오 객체의 src 속성값이 플레이할 음악경로
+
+        $(document).ready(function() {
+            $(document).on("keydown", keyEventFnc)
+            function keyEventFnc(e) {
+                switch(e.keyCode) {
+                    case 65: // A (65)
+                        $("#note").val("A(do)")
+                        audio.src = audioList[0]
+                        audio.play()
+                        break;
+                    case 83: // S (83)
+                        $("#note").val("S(re)")
+                        audio.src = audioList[1]
+                        audio.play()
+                        break;
+                    case 68: // D (68)
+                        $("#note").val("D(mi)")
+                        audio.src = audioList[2]
+                        audio.play()
+                        break;
+                    case 70: // F (70)
+                        $("#note").val("F(pa)")
+                        audio.src = audioList[3]
+                        audio.play()
+                        break;
+                    case 71: // G (71)
+                        $("#note").val("G(sol)")
+                        audio.src = audioList[4]
+                        audio.play()
+                        break;
+                    case 72: // H (72)
+                        $("#note").val("H(la)")
+                        audio.src = audioList[5]
+                        audio.play()
+                        break; 
+                    case 74: // J (74)
+                        $("#note").val("J(si)")
+                        audio.src = audioList[6]
+                        audio.play()
+                        break;
+                    case 75: // K (75)
+                        $("#note").val("K(high-do)")
+                        audio.src = audioList[7]
+                        audio.play()
+                        break; 
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+   <p>
+      <input type="text" name="note" id="note">
+   </p>
+</body>
+</html>
