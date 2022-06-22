@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script>
+        $(document).ready(function(){
+
+            var map=[
+                ['★','□','□'],
+                ['□' ,'□','□'],
+                ['□' ,'□','□']
+            ]
+
+            var x=0
+            var y=0
+
+            function init(){
+                var fullText=''
+                for(var i=0; i<=2; i++){
+                    for(var j=0; j<=2; j++){
+                        fullText += map[i][j]
+                    }
+                    fullText += "<br>"
+                }
+                $('#map-area').html(fullText)
+            }
+
+            function refresh(){
+                $('#map-area').html('')
+                var fullText=''
+                for(var i=0; i<=2; i++){
+                    for(var j=0; j<=2; j++){
+                        fullText += map[i][j]
+                    }
+                    fullText += "<br>"
+                }
+                $('#map-area').html(fullText)
+            }
+
+            init()
+
+            $(document).on("keydown",keyEventFnc)
+            function keyEventFnc(e){
+                switch(e.keyCode){//키코드 값
+                    case 37://LEFT 키코드 값
+                        $("#user-id").val("LEFT")
+                        map[y][x]='□'
+                        x--
+                        if (x < 0) {
+                            alert("don't move");
+                            x = 0
+                        }
+                        map[y][x]='★'
+                        break;
+                    case 38://TOP 키코드 값
+                        $("#user-id").val("TOP")
+                        map[y][x]='□'
+                        y--
+                        if (y < 0) {
+                            alert("don't move");
+                            y = 0
+                        }
+                        map[y][x]='★'
+                        break;
+                    case 39://RIGHT 키코드 값
+                        $("#user-id").val("RIGHT")
+                        map[y][x]='□'
+                        x++
+                        if (x >= 3) {
+                            alert("don't move");
+                            x = 2
+                        }
+                        map[y][x]='★'
+                        break;
+                    case 40://BOTTOM 키코드 값
+                        $("#user-id").val("BOTTOM")
+                        map[y][x]='□'
+                        y++
+                        if (y >= 3) {
+                            alert("don't move");
+                            y = 2
+                        }
+                        map[y][x]='★'
+                        break;
+                }
+                refresh()//repaint
+            }
+        })
+    </script>
+</head>
+<body>
+   <p>
+      <input type="text" name="user-id" id="user-id">
+   </p>
+   <div id="map-area">
+
+   </div>
+</body>
+</html>
