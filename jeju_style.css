@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#container {
+    margin: 0 auto; /* 화면 중앙에 배치 */
+    width: 1200px;
+    background-color: aliceblue;
+}
+
+header {
+    width: 1200px;
+    height: 100px;
+    background-color: #07c;
+}
+
+header>#logo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    line-height: 100px; /* height 값과 같게 만들어서 세로 중간에 오도록 */
+    padding-left: 20px;
+}
+
+#logo h1{
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    font-size: 40;
+    color: #fff;
+    text-shadow: 0 -1px 0 #222; /* 그림자색 (좌우 그림자) */
+}
+
+header>nav{
+    float: right;
+    width: 900px;
+    height: 100px;
+    background-color: skyblue;
+    padding-top: 38px; /*메뉴 자체를 좀 밑으로 내리려고*/
+}
+
+#topMenu{
+    height: 60px;
+}
+
+#topMenu>li{
+    float: left;
+    position: relative; /* 서브메뉴에 absolute 주기 위해 부모 요소에 relative 지정*/
+}
+
+#topMenu>li>a{
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px #07c; /* 그림자추가 */
+    padding: 20px 60px;
+}
+
+#topMenu>li>a>span{
+    font-size : 0.5em; /*화살표*/
+}
+
+#topMenu>li>a:hover {
+    color: #000;
+    text-shadow: 0 -1px #07c; /* 글자가 굵어지지 않도록 지정 */
+}
+
+#topMenu>li>ul{
+    display: none;
+    position: absolute;
+    width: 160px;
+    background-color: rgba(225, 225, 225, 0.6);
+    left: 20px;
+    margin: 0;
+}
+
+#topMenu>li>ul>li{
+    padding: 10px 10px 10px 30px;
+}
+
+#topMenu>li>ul>li>a{
+    font-size: 14px;
+    padding: 10px;
+    color: #000;
+}
+
+#topMenu>li:hover>ul{
+    display: block; /* 메인메뉴 항목 위로 오버하면 서브메뉴 표시 */
+    z-index: 10; /* 슬라이드 쇼에 가리지 않게 조절 */
+}
+
+#topMenu>li>ul>li>a:hover{
+    color: #f00;
+}
+
+#slideShow {
+    clear: both; /*플로팅 해제*/
+    width: 100%;
+    height: 300px;
+    /* background-color: yellow; */
+    overflow: hidden; /*영역이 넘치면 감춤*/
+    position: relative;
+    /*하위 영역 (slides)에 position: absolute를 쓰려고 여기에 기준 설정*/
+}
+
+#slides{
+    position: absolute;
+}
+
+#slides>img {
+    width: 100%;
+    float: left; /*가로 배치*/
+}
+
+button{
+    position: absolute;
+    height: 100%; /*이미지 높이에 맞추기*/
+    top: 0;
+    border: none;
+    padding: 20px;
+    background-color: transparent; /*투명*/
+    color: #000; /*화살표를 검은색으로 지정*/
+    font-weight: 800;
+    font-size: 24px;
+    opacity: 0.5; /*투명도 50%*/
+}
+
+#prev{
+    left: 0;
+}
+
+#next{
+    right: 0;
+}
+
+button:hover{ /*버튼에 마우스를 올리면*/
+    background-color: #222; /*짙은 회색*/
+    color: #fff;
+    opacity: 0.6;
+    cursor: pointer; /*포인터 모양으로 바꿈*/
+}
+
+button:focus{ /*마우스를 떼면*/
+    outline: 0; /*아웃라인을 없앰*/
+}
+
+#contents {
+    width: 1200px;
+    height: 300px;
+    background-color: violet;
+}
+
+#contents>#tab-menu{
+    float: left;
+    width: 800px;
+    height: 300px;
+    background-color: yellowgreen;
+}
+
+#contents>#links{
+    float: left;
+    width: 400px;
+    height: 300px;
+    background-color: tomato;
+}
+
+#footer{
+    width: 1200px;
+    height: 100px;
+    background-color: springgreen;
+}
