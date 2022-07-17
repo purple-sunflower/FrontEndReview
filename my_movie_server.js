@@ -1,37 +1,78 @@
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 2000;
 
-app.get('/', (req, res)=>{
+movie_list=[
+    {id:1,title:'perl harbor'},
+    {id:2,title:'lord of the rings'},
+    {id:3,title:'top gun'}
+]//JSON배열
+app.get('/',(req,res)=>{
     res.send('root response')
 })
-
-app.get('/api/movie1/:title', (req, res)=> {
-    console.log(req.params)
-    console.log(req.params.title)
-    const title = req.params.title
-    res.send('영화 제목: ' + title)
+app.get('/movies',(req,res)=>{
+    for(var i=0; i<movie_list.length; i++){
+        console.log('id:'+movie_list[i].id)
+        console.log('title:'+movie_list[i].title)
+    }
+})
+app.get('/movies/:id',(req,res)=>{
+    const id=req.params.id
+    for(var i=0; i<movie_list.length; i++){
+        if(id==movie_list[i].id){
+            console.log('id:'+movie_list[i].id)
+            console.log('title:'+movie_list[i].title)
+        }
+    }
+    res.send('/movies/:id')
 })
 
-app.get('/api/movie2/:title&:director', (req, res)=> {
-    console.log(req.params)
-    console.log(req.params.title)
+app.get('/post/movies/:id&:title',(req,res)=>{ // 추가
+    const id = req.params.id
     const title = req.params.title
-    console.log(req.params.director)
-    const director = req.params.director
-    res.send('영화 제목: ' + title + ' 감독: ' + director)
+    movie_list.push({id: id, title: title})
+    
+    //확인
+    for(var i=0; i<movie_list.length; i++){
+        console.log('id: '+movie_list[i].id)
+        console.log('title: '+movie_list[i].title)
+    }
+
+    res.send('/post/movies/:id&:title')
 })
 
-app.get('/api/movie3/:title&:director&:running', (req, res)=> {
-    console.log(req.params)
-    console.log(req.params.title)
+app.get('/put/movies/:id&:title',(req,res)=>{ // 수정
+    const id = req.params.id 
     const title = req.params.title
-    console.log(req.params.director)
-    const director = req.params.director
-    console.log(req.params.running_time)
-    const running = req.params.running_time
-    res.send('영화 제목: ' + title + ' 감독: ' + director + ' 러닝타임: ' + running)
+    
+    for(var i=0; i<movie_list.length; i++){
+        if(id==movie_list[i].id){
+            movie_list[i].title = title
+        }
+    }
+
+    for(var i=0; i<movie_list.length; i++){ // 확인
+        console.log('id: '+movie_list[i].id)
+        console.log('title: '+movie_list[i].title)
+    }
+
+    res.send('/put/movies/:id&:title')
 })
+
+app.get('/delete/movies/:id',(req,res)=>{
+    const id = req.params.id 
+    
+    movie_list.splice(id-1,1)
+
+    for(var i=0; i<movie_list.length; i++){ // 확인
+        console.log('id: '+movie_list[i].id)
+        console.log('title: '+movie_list[i].title)
+    }
+
+    res.send('/delete/movies/:id')
+})
+
+
 
 app.listen(PORT,()=>{
     console.log(`Server On: http://localhost:${PORT}`)
