@@ -1,0 +1,17 @@
+#girl_group{
+    width: 800px;
+    height: 200px;
+    background-color: lightsalmon;
+    margin: 5px;
+}
+#g-left>img{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+#g-right{
+    width: 600px;
+    height: 200px;
+    background-color: lightsalmon;
+    float: left;
+}

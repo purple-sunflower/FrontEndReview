@@ -1,0 +1,17 @@
+#boy_group{
+    width: 800px;
+    height: 200px;
+    background-color: skyblue;
+    margin: 5px;
+}
+#b-left>img{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+#b-right{
+    width: 600px;
+    height: 200px;
+    background-color: skyblue;
+    float: left;
+}

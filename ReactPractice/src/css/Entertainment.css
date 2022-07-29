@@ -1,0 +1,17 @@
+#entertainment{
+    width: 800px;
+    height: 200px;
+    background-color: bisque;
+    margin: 5px;
+}
+#e-left>img{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+#e-right{
+    width: 600px;
+    height: 200px;
+    background-color: burlywood;
+    float: left;
+}
