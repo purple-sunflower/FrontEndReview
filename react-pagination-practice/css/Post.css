@@ -1,0 +1,32 @@
+#post{
+    width: 90%;
+    height: 50px;
+    background-color: lightgrey;
+    margin: 10px;
+}
+
+#post>span{
+    float: left;
+    height: 100%;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#post>span:first-child{
+    width: 5%;
+    background-color: aquamarine;
+}
+
+#post>span:nth-child(2){
+    width: 30%;
+    background-color: thistle;
+}
+#post>span:nth-child(3){
+    width: 15%;
+    background-color: rosybrown ;
+}
+#post>span:nth-child(4){
+    width: 15%;
+    background-color: mediumpurple ;
+}
