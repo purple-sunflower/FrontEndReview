@@ -1,0 +1,45 @@
+#sm{
+    width: 90%;
+    height: 100px;
+    background-color: plum;
+    margin: 10px;
+}
+
+#sm>span{
+    float: left;
+    height: 100%;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#sm>span:first-child{
+    width: 20%;
+    background-color: aliceblue;
+}
+
+#sm>span:first-child>img{
+    width: 120px;
+    height: 80px;
+    background-color: aliceblue;
+}
+
+#sm>span:nth-child(2){
+    width: 10%;
+    background-color: rgb(205, 229, 250);
+}
+
+#sm>span:nth-child(3){
+    width: 25%;
+    background-color: rgb(170, 215, 254);
+}
+
+#sm>span:nth-child(4){
+    width: 20%;
+    background-color: rgb(163, 209, 250);
+}
+
+#sm>span:nth-child(5){
+    width: 20%;
+    background-color: rgb(121, 188, 246);
+}

@@ -1,0 +1,31 @@
+#pagination{
+    width: 90%;
+    height: 100px;
+    background-color: lightcoral;
+}
+
+#pagination>div:first-child{
+    background-color: rgb(236, 195, 195);
+}
+
+#pagination>div:nth-child(2){
+    background-color: rgb(243, 174, 174);
+}
+
+.page{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: hotpink;
+    border: 1px solid ivory;
+    color: ivory;
+    text-align: center;
+    margin: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#pagination span:hover{
+    font-weight: bold;
+}
