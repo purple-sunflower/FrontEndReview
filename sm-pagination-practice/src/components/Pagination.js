@@ -31,6 +31,7 @@ class Pagination extends Component {
       return
     }
     setCurrentPage(currentPage-1)
+    this.setCurrentPage(currentPage-1)
   }
 
   nextFunc=()=>{
@@ -42,6 +43,7 @@ class Pagination extends Component {
       return
     }
     setCurrentPage(currentPage+1)
+    this.setCurrentPage(currentPage+1)
   }
 
   setAllDefault=()=>{
