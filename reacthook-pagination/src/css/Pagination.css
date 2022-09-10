@@ -1,0 +1,18 @@
+#pagination{
+    width: 900px;
+    height: 200px;
+    background-color: lightgreen;
+}
+
+.page{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    background-color: lightgray;
+    text-align: center;
+    margin: 10px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
