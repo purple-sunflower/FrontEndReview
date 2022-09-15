@@ -2,12 +2,12 @@ import '../css/Pagination.css';
 
 function Pagination(props) {
 
-  setCurrentPage=(page)=>{
+  const setCurrentPage=(page)=>{
     alert(page+"페이지 클릭(Pagination.js)")
     props.setCurrentPage(page)
   }
 
-  prevPage=()=>{
+  const prevPage=()=>{
     alert("이전")
     if (props.currentPage==1){
         alert("여기는 첫 페이지 입니다.")
@@ -16,13 +16,13 @@ function Pagination(props) {
     props.setCurrentPage(props.currentPage-1)
   }
 
-  nextPage=()=>{
+  const nextPage=()=>{
     alert("다음")
     if (props.currentPage+1 > lastPageNum){
         alert("여기는 마지막 페이지 입니다.")
         return
     }
-    props.setCurrentPage(currentPage+1)
+    props.setCurrentPage(props.currentPage+1)
   }
 
     let pageNumbers=[];
@@ -44,17 +44,17 @@ function Pagination(props) {
     return (
       <div id="pagination">
         <div>
-            총 글 갯수: {movieListLength}
+            총 글 갯수: {props.movieListLength}
         </div>
         <div>
-            페이지당 글 갯수: {movieListPerPage}
+            페이지당 글 갯수: {props.movieListPerPage}
         </div>
         <div>
-            <span className='page' onClick={this.prevPage}>
+            <span className='page' onClick={prevPage}>
                 &lt;
             </span>
             <span>{movieList}</span>
-            <span className='page' onClick={this.nextPage}>
+            <span className='page' onClick={nextPage}>
                 &gt;
             </span>
         </div>
