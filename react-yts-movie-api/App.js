@@ -23,6 +23,7 @@ class App extends Component {
     const {data : {data : {movies}}} 
     = await axios.get("https://yts.mx/api/v2/list_movies.json")
     this.setState({movieList:movies})
+    console.log(movies)
   }
 
   //pagination
