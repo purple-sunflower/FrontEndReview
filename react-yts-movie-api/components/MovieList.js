@@ -15,7 +15,7 @@ class MovieList extends Component {
         (data) => (<Movie key={data.id} 
         medium_cover_image = {<img src= {data.medium_cover_image}/>}
         title={data.title} year={data.year} genres={data.genres}
-        summary={data.summary}/>)
+        summary={data.summary} runtime={data.runtime} rating={data.rating}/>)
     )
 
     return (

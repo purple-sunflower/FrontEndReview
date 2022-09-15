@@ -14,7 +14,7 @@ class Pagination extends Component {
     this.props.setCurrentPage(page)
   }
 
-  prevPage=(page)=>{
+  prevPage=()=>{
     alert("이전")
 
     const {currentPage, setCurrentPage} = this.props
@@ -25,7 +25,7 @@ class Pagination extends Component {
     setCurrentPage(currentPage-1)
   }
 
-  nextPage=(page)=>{
+  nextPage=()=>{
     alert("다음")
 
     const {currentPage, setCurrentPage} = this.props
