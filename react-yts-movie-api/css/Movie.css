@@ -1,6 +1,49 @@
 #movie{
     width: 900px;
-    height: 50px;
+    height: 270px;
     background-color: yellowgreen;
     margin: 10px;
+}
+
+#movie>#left-side{
+    float: left;
+    width: 250px;
+    height: 260px;
+    background-color: lightpink;
+    padding-top: 30px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+#movie>#right-side{
+    float: left;
+    width: 500px;
+    height: 260px;
+    background-color: lightblue;
+}
+
+#movie>#right-side>span{
+    display: block;
+    width: 490px;
+    height: 35px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#movie>#right-side>span:first-child{
+    background-color: lightgray;
+}
+
+#movie>#right-side>span:nth-child(2){
+    background-color: lightgoldenrodyellow;
+}
+
+#movie>#right-side>span:nth-child(3){
+    background-color: lightcyan;
+}
+
+#movie>#right-side>span:nth-child(4){
+    overflow: auto;
+    height: 140px;
+    background-color: lightsalmon;
 }

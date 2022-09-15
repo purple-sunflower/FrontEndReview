@@ -1,5 +1,9 @@
 #movie-list{
     width: 900px;
     height: auto;
-    background-color: lightgrey;
+}
+
+img{
+    width: 150px;
+    height: 200px;
 }
