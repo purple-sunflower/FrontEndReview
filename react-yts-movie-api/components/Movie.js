@@ -12,7 +12,8 @@ class Movie extends Component {
   render(){
     return (
       <div id="movie">
-        <span>{this.props.movieList[0]}</span>
+        <span>{this.props.no}</span>
+        <span>{this.props.title}</span>
       </div>
     );
   }
