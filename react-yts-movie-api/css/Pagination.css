@@ -2,6 +2,7 @@
     width: 900px;
     height: 100px;
     background-color: springgreen;
+    position: relative;
 }
 
 .page{
@@ -15,4 +16,9 @@
     box-sizing: border-box;
     background-color: darkgray;
     cursor: pointer;
+}
+
+#pagination>div:nth-child(3){
+    position: absolute;
+    left: 240px;
 }
