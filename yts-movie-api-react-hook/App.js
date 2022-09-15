@@ -15,7 +15,7 @@ function App(){
   const [movieListPerPage, setMovieListPerPage] = useState(3)
   const [currentPage, setCurrentPage] = useState(1)
 
-  getMovies=async()=>{
+  const getMovies=async()=>{
     const {data : {data : {movies}}} 
     = await axios.get("https://yts.mx/api/v2/list_movies.json")
     this.setState({movieList:movies})
@@ -29,7 +29,7 @@ function App(){
     })
   }
 
-  currentMovieList=(movieList)=>{
+  const currentMovieList=(movieList)=>{
     const indexOfFirst = (currentPage-1)*movieListPerPage
     const indexOfLast = indexOfFirst+movieListPerPage
     const slicedMovieList = movieList.slice(indexOfFirst, indexOfLast)
