@@ -1,6 +1,6 @@
 #movie{
     width: 900px;
-    height: 270px;
+    height: 350px;
     background-color: yellowgreen;
     margin: 10px;
 }
@@ -8,23 +8,23 @@
 #movie>#left-side{
     float: left;
     width: 250px;
-    height: 260px;
+    height: 330px;
     background-color: lightpink;
-    padding-top: 30px;
+    padding-top: 60px;
     padding-left: 50px;
     box-sizing: border-box;
 }
 
 #movie>#right-side{
     float: left;
-    width: 500px;
-    height: 260px;
+    width: 550px;
+    height: 330px;
     background-color: lightblue;
 }
 
 #movie>#right-side>span{
     display: block;
-    width: 490px;
+    width: 540px;
     height: 35px;
     padding-top: 10px;
     box-sizing: border-box;
@@ -43,6 +43,14 @@
 }
 
 #movie>#right-side>span:nth-child(4){
+    background-color: sandybrown;
+}
+
+#movie>#right-side>span:nth-child(5){
+    background-color: plum;
+}
+
+#movie>#right-side>span:nth-child(6){
     overflow: auto;
     height: 140px;
     background-color: lightsalmon;
