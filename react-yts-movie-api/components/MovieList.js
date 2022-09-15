@@ -11,10 +11,11 @@ class MovieList extends Component {
   }
 
   render(){
-
     const result= this.props.movieList.map(
-        (data) => (<Movie key={data.no} no={data.no}
-        title={data.title}/>)
+        (data) => (<Movie key={data.id} 
+        medium_cover_image = {<img src= {data.medium_cover_image}/>}
+        title={data.title} year={data.year} genres={data.genres}
+        summary={data.summary}/>)
     )
 
     return (

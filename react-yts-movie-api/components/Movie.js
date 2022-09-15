@@ -12,8 +12,15 @@ class Movie extends Component {
   render(){
     return (
       <div id="movie">
-        <span>{this.props.no}</span>
-        <span>{this.props.title}</span>
+        <div id='left-side'>
+            {this.props.medium_cover_image}
+        </div>
+        <div id='right-side'>
+            <span>제목: {this.props.title} </span>
+            <span>년도: {this.props.year} </span>
+            <span>장르: {this.props.genres}</span>
+            <span>줄거리: {this.props.summary}</span>
+        </div>
       </div>
     );
   }

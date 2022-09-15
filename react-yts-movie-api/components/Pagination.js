@@ -14,6 +14,30 @@ class Pagination extends Component {
     this.props.setCurrentPage(page)
   }
 
+  prevPage=(page)=>{
+    alert("이전")
+
+    const {currentPage, setCurrentPage} = this.props
+    if (currentPage==1){
+        alert("여기는 첫 페이지 입니다.")
+        return
+    }
+    setCurrentPage(currentPage-1)
+  }
+
+  nextPage=(page)=>{
+    alert("다음")
+
+    const {currentPage, setCurrentPage} = this.props
+    const {lastPageNum} = this.state
+
+    if (currentPage+1 > lastPageNum){
+        alert("여기는 마지막 페이지 입니다.")
+        return
+    }
+    setCurrentPage(currentPage+1)
+  }
+
   render(){
     const {movieListLength, movieListPerPage} = this.props
 
@@ -37,7 +61,13 @@ class Pagination extends Component {
             페이지당 글 갯수: {movieListPerPage}
         </div>
         <div>
+            <span className='page' onClick={this.prevPage}>
+                &lt;
+            </span>
             <span>{movieList}</span>
+            <span className='page' onClick={this.nextPage}>
+                &gt;
+            </span>
         </div>
       </div>
     );
