@@ -1,0 +1,25 @@
+#pagination{
+    width: 900px;
+    height: 100px;
+    background-color: springgreen;
+    position: relative;
+    margin-left: 60px;
+}
+
+.page{
+    display:inline-block;
+    width:35px;
+    height:35px;
+    border:1px solid black;
+    margin:5px;
+    text-align: center;
+    padding-top:5px;
+    box-sizing: border-box;
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+#pagination>div:nth-child(3){
+    position: absolute;
+    left: 240px;
+}

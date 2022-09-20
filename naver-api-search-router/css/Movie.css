@@ -1,0 +1,52 @@
+#movie{
+    width: 900px;
+    height: 300px;
+    background-color: yellowgreen;
+    margin: 10px;
+}
+
+#movie>#left-side{
+    float: left;
+    width: 250px;
+    height: 290px;
+    background-color: lightpink;
+    padding-top: 30px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+#movie>#right-side{
+    float: left;
+    width: 550px;
+    height: 290px;
+    background-color: lightblue;
+}
+
+#movie>#right-side>span{
+    display: block;
+    width: 540px;
+    height: 35px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#movie>#right-side>span:first-child{
+    background-color: lightgray;
+}
+
+#movie>#right-side>span:nth-child(2){
+    background-color: lightgoldenrodyellow;
+}
+
+#movie>#right-side>span:nth-child(3){
+    background-color: lightcyan;
+}
+
+#movie>#right-side>span:nth-child(4){
+    background-color: sandybrown;
+    height: auto;
+}
+
+#movie>#right-side>span:nth-child(5){
+    background-color: plum;
+}
