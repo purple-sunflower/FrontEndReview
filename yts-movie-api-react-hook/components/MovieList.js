@@ -1,9 +1,9 @@
 import '../css/MovieList.css';
-import Movie from './Movie';
+import Movie from './Movie.js';
 
-function MovieList() {
+function MovieList(props) {
 
-    const result= this.props.movieList.map(
+    const result= props.movieList.map(
         (data) => (<Movie key={data.id} 
         medium_cover_image = {<img src= {data.medium_cover_image}/>}
         title={data.title} year={data.year} genres={data.genres}
