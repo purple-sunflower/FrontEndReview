@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home.js'
 import Search from './components/Search.js'
+import Detail from './components/Detail.js';
 import InputComp from './components/InputComp.js'
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
           <Routes>
             <Route exact path='/' element={<Home/>}/>
             <Route exact path='/search' element={<Search/>}/>
+            <Route exact path= '/detail' element={<Detail/>}/>
           </Routes>
         </BrowserRouter>
       </div>
