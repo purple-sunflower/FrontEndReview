@@ -11,10 +11,11 @@ app.get('/hello',(req,res)=>{
 
 app.get('/person',(req,res)=>{
     console.log('/person')
-    db.query("select * from Person", (err, data) =>{
+    db.query("select * from person",(err,data)=>{
         if(!err){
+            //console.log(data)
             res.send(data)
-        } else{
+        }else{
             console.log(err)
         }
     })
@@ -22,19 +23,22 @@ app.get('/person',(req,res)=>{
 
 app.post('/add/person',(req,res)=>{
     console.log('/add/person')
-    const name = req.body.name
-    const age = req.body.age
-    const height = req.body.height
-
-    db.query(`insert into Person (name, age, height) values("${name}", ${age}, ${height})`, (err, data) =>{
+    console.log(req.body)
+    const name=req.body.name
+    const age=req.body.age
+    const height=req.body.height
+    
+    db.query(`insert into person(name,age,height) values('${name}',${age},${height})`,(err,data)=>{
         if(!err){
+            //console.log(data)
             res.send(data)
-        } else{
+        }else{
             console.log(err)
         }
     })
+
 })
 
-app.listen(PORT, () =>{
+app.listen(PORT, () => {
     console.log(`Server On : http://localhost:${PORT}/`);
 })
