@@ -1,25 +1,23 @@
-import { useState } from 'react';
 import './App.css';
 import axios from 'axios';
+import Person from './components/Person.js'
 import InputComp from './components/InputComp.js';
-import Person from './components/Person.js';
+import { useState } from 'react';
 
 function App() {
 
-  const [personList, setPersonList] = useState([]);
+  let [personList, setPersonList] = useState([])
 
-  // 모두조회
-  const selectAll = async()=>{
+  const selectAll=async()=>{
     const result = await axios.get('/person')
     console.log(result)
     console.log(result.data)
     setPersonList(result.data)
   }
 
-  // 추가
   const addPersonInfo=(name, age, height)=>{
-    const personObj = {name:name, age:age, height:height}
-    const concatPersonList = personList.concat(personObj)
+    const personObj={name:name, age:age, height:height}
+    const concatPersonList= personList.concat(personObj)
     setPersonList(concatPersonList)
     axios.post('/add/person', personObj)
   }
@@ -29,7 +27,7 @@ function App() {
   )
 
   return (
-    <div id="app">
+    <div id='app'>
       <InputComp addPersonInfo={addPersonInfo}/>
       <button onClick={selectAll}>모두 조회</button>
       {result}
