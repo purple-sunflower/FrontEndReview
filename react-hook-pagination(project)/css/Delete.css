@@ -1,0 +1,13 @@
+#delete{
+    width: 350px;
+    height: 100px;
+    background-color: lightseagreen;
+    padding-top: 35px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#delete>span{
+    float: left;
+    margin-right: 5px;
+}
