@@ -1,0 +1,56 @@
+// 번호, 제목, 작성자, 등록일, 첨부, 조회 , (글 내용)\
+// no, title, author, date, attach , hits, contents
+
+create table Board (
+	no int,
+	title varchar(50),
+	contents text,
+	author varchar(20),
+	date date,
+	attach boolean,
+	hits int	
+);
+
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(22,"title-21","title-22입니다.", "관리자", 20220926, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(21,"title-21","title-21입니다.", "관리자", 20220925, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(20,"title-20","title-20입니다.", "관리자", 20220924, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(19,"title-19","title-19입니다.", "관리자", 20220923, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(18,"title-18","title-18입니다.", "관리자", 20220922, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(17,"title-17","title-17입니다.", "관리자", 20220921, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(16,"title-16","title-16입니다.", "관리자", 20220920, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(15,"title-15","title-15입니다.", "관리자", 20220919, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(14,"title-14","title-14입니다.", "관리자", 20220918, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(13,"title-13","title-13입니다.", "관리자", 20220917, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(12,"title-12","title-12입니다.", "관리자", 20220916, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(11,"title-11","title-11입니다.", "관리자", 20220915, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(10,"title-10","title-10입니다.", "관리자", 20220914, 0, 0);
+values(9,"title-9","title-9입니다.", "관리자", 20220913, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(8,"title-8","title-8입니다.", "관리자", 20220912, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(7,"title-7","title-7입니다.", "관리자", 20220911, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(6,"title-6","title-6입니다.", "관리자", 20220910, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(5,"title-5","title-5입니다.", "관리자", 20220909, 0, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(4,"title-4","title-4입니다.", "관리자", 20220908, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(3,"title-3","title-3입니다.", "관리자", 20220907, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(2,"title-2","title-2입니다.", "관리자", 20220906, 1, 0);
+insert into Board (no, title, contents, author, date, attach, hits) 
+values(1,"title-1","title-1입니다.", "관리자", 20220905, 0, 0);
