@@ -39,12 +39,6 @@ function Pagination(props) {
     return(
         <div id="pagination">
             <div>
-                총 글 갯수: {props.total}
-            </div>
-            <div>
-                페이지 당 글 갯수: {props.postPerPage}
-            </div>
-            <div>
                 <span className="page" onClick={prevPage}>
                     &lt;
                 </span>

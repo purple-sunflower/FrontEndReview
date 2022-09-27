@@ -11,6 +11,14 @@ function PostList(props) {
 
     return(
         <div id="postlist">
+            <div id="category">
+                <span>번호</span>
+                <span>제목</span>
+                <span>작성자</span>
+                <span>날짜</span>
+                <span>첨부</span>
+                <span>조회</span>
+            </div>
             {result}
         </div>
     )
