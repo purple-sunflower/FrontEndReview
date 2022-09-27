@@ -1,0 +1,43 @@
+#post{
+    width: 1000px;
+    height: 50px;
+    background-color: lightgreen;
+    margin-bottom: 10px;
+}
+
+#post>span{
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#post>span:first-child{
+    width: 5%;
+    background-color: lightcoral;
+}
+#post>span:nth-child(2){
+    width: 20%;
+    background-color: lightyellow;
+}
+#post>span:nth-child(3){
+    width: 15%;
+    background-color: lightsalmon;
+}
+#post>span:nth-child(4){
+    width: 10%;
+    background-color: lightsteelblue;
+}
+#post>span:nth-child(5){
+    width: 30%;
+    background-color: lightslategray;
+}
+#post>span:nth-child(6){
+    width: 5%;
+    background-color: lightgoldenrodyellow;
+}
+#post>span:nth-child(7){
+    width: 5%;
+    background-color: lightcoral;
+}
