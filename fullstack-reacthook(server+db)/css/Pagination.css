@@ -2,6 +2,9 @@
     width: 1000px;
     height: 100px;
     background-color: lightpink;
+    padding-top: 30px;
+    padding-left: 400px;
+    box-sizing: border-box;
 }
 
 .page{

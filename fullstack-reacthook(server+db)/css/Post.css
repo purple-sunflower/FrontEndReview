@@ -18,7 +18,7 @@
     background-color: lightcoral;
 }
 #post>span:nth-child(2){
-    width: 20%;
+    width: 30%;
     background-color: lightyellow;
 }
 #post>span:nth-child(3){
@@ -30,7 +30,7 @@
     background-color: lightsteelblue;
 }
 #post>span:nth-child(5){
-    width: 30%;
+    width: 15%;
     background-color: lightslategray;
 }
 #post>span:nth-child(6){
