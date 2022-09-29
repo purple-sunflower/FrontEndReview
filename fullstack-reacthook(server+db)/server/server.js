@@ -20,23 +20,17 @@ app.get('/board',(req,res)=>{
     })
 })
 
-// app.post('/add/board',(req,res)=>{
-//     console.log('/add/board')
-//     console.log(req.body)
-//     const name=req.body.name
-//     const age=req.body.age
-//     const height=req.body.height
-    
-//     db.query(`insert into person(name,age,height) values('${name}',${age},${height})`,(err,data)=>{
-//         if(!err){
-//             //console.log(data)
-//             res.send(data)
-//         }else{
-//             console.log(err)
-//         }
-//     })
-
-// })
+app.get('/board/title',(req,res)=>{
+    console.log('/board/title')
+    const title=req.body.title
+    db.query(`select * from board where title like "%${title}%"`,(err,data)=>{
+        if(!err){
+            res.send(data)
+        }else{
+            console.log(err)
+        }
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`Server On : http://localhost:${PORT}/`);
