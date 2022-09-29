@@ -1,0 +1,54 @@
+1. mongodb community server 를 download
+2. mongodb shell 다운로드
+3. mongosh.exe 실행
+
+* RDBMS   - Database - Tables      - Rows      - columns 
+  MongoDB - Database - collections - documents - fields
+
+show dbs
+
+use mongo_practice => 생성과 사용 동시에!
+
+db.createCollection("person") => person 컬렉션 생성
+
+db.person.insertOne( {"name":"lee", "age":20, "height":173.5} ) 
+db.person.insertOne( {"name":"mee", "age":21, "height":179.4} )
+db.person.insertOne( {"name":"see", "age":22, "height":163.6} )
+=> {}는 document
+
+==> db.person.insertMany([
+	{"name":"lee", "age":20, "height":173.5}, 
+	{"name":"mee", "age":21, "height":179.4},
+	{"name":"see", "age":22, "height":163.6}  
+])
+
+한 개 넣을 때는 insertOne
+
+db.person.find() => 모두 조회
+
+CRUD! (생성, 조회, 수정, 삭제)
+
+1. 생성
+db.person.insertOne( {"name":"lee", "age":20, "height":173.5} )
+
+
+2. 조회
+db.person.find()
+
+3. 수정
+db.person.updateOne(
+	{name: "lee"},  ---> 수정할 값의 조건
+	{$set: {age: 23} }  ---> 실제 수정 값
+)
+db.person.updateMany(
+	{조건},
+	{$set: {바꿀 값} }
+)
+
+4. 삭제
+db.person.deleteOne({name:"lee"}) -> 조건에 해당하는 값 하나 삭제 (조건에 해당하는 값이 여러개 있다면, 그 중 젤 첫번째 값 삭제)
+db.person.remove({{name:"lee"}}) -> 위와 같음
+db.person.deleteMany({ 조건 넣기 })
+db.person.deleteMany({}) -> 전체 삭제
+
+
