@@ -3,6 +3,8 @@ import '../css/PostMain.css';
 import axios from 'axios';
 import PostList from './PostList.js';
 import Pagination from './Pagination.js'
+import {Link} from 'react-router-dom';
+import SearchComp from './SearchComp';
 // 번호, 제목, 작성자, 등록일, 첨부, 조회 , (글 내용)
 // no, title, author, date, , hits, contents
 // 글쓰기 router 사용 (postWrite)
@@ -37,9 +39,11 @@ function PostMain() {
 
   return (
     <div id='postmain'>
+      <SearchComp/>
       <span>총 게시물: {postList.length}   /</span>
       <span>   페이지 : {currentPage}/{lastPage}</span>
       <PostList postList={currentPostList(postList)}/>
+      <button><Link to='/postWrite' id='postwrite_btn'>글쓰기</Link></button>
       <Pagination currentPage={currentPage} postPerPage={postPerPage} 
       total={postList.length} setCurrentPage={setCurrentPage}/>
     </div>

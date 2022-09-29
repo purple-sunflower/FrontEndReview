@@ -4,8 +4,7 @@ import Post from './Post.js'
 function PostList(props) {
 
     const result = props.postList.map(
-        (data) => (<Post no={data.no} title={data.title} 
-          contents={data.contents} author={data.author} 
+        (data) => (<Post no={data.no} title={data.title} author={data.author} 
           date={data.date} attach={data.attach} hits={data.hits}/>)
     )
 
