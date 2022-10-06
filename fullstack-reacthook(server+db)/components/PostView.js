@@ -2,7 +2,7 @@ import axios from "axios";
 import queryString from 'query-string'
 import { useEffect, useState } from "react";
 import "../css/PostView.css";
-import Post from "./Post";
+import PostDetail from './PostDetail.js';
 
 // 글 번호로 요청 postView?no=22 => 완료!
 // 검색api 
@@ -10,9 +10,8 @@ import Post from "./Post";
 
 function PostView(props){
 
-    let [postContents, setPostContents] = useState([])
+    const [postContents, setPostContents] = useState([])
     
-
     useEffect(()=>{
         const queryObj = queryString.parse(window.location.search) // {no:22}
         const searchNo = queryObj.no
@@ -26,7 +25,7 @@ function PostView(props){
 
     return(
         <div id="postview">
-            {/* {postContents.contents} */}
+            <PostDetail/>
             <div id="title-area">
                 제목: {postContents.title}
             </div>
