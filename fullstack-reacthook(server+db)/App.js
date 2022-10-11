@@ -4,7 +4,7 @@ import './App.css';
 import PostMain from './components/PostMain.js'
 import PostWrite from './components/PostWrite.js'
 import PostView from './components/PostView.js'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 // 번호, 제목, 작성자, 등록일, 첨부, 조회 , (글 내용)
@@ -20,17 +20,30 @@ import axios from 'axios';
 
 function App() {
 
-  // useEffect(()=>{
-  //   const addPost = async()=>{
-  //     const result = await axios.post(`/board/add/${title}${contents}`)
-  //   }
-  // })
+  const enrollPost = (title, contents) => {
+    alert("글 등록!(app.js)")
+    alert("title: " + title)
+    alert("contents: "+ contents)
+    let myDate = new Date()
+    let year = myDate.getFullYear()
+    let month = myDate.getMonth()+1
+    let day= myDate.getDate()
 
-  const addPostInfo = (title, contents) =>{
-    alert("추가! (app.js)")
-    alert("추가 제목"+ title)
-    alert("추가 내용"+ contents)
+    if(month<10){
+      month="0"+month
+    }
+    if(day<10){
+      day="0"+day
+    }
 
+    let regDate = year+"-"+month+"-"+day
+    const post = {title:title, contents:contents, author:'관리자', date:regDate}
+    axiosEnrollPost(post)
+  }
+
+  const axiosEnrollPost = async(writePost) => {
+    const res = await axios.post('/board/add/', writePost)
+    console.log('추가결과', res)
   }
 
   return (
@@ -38,7 +51,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<PostMain/>}/>
-          <Route path='/postWrite' element={<PostWrite/>}/>
+          <Route path='/postWrite' element={<PostWrite enrollPost={enrollPost}/>}/>
           <Route path='/postView' element={<PostView/>}/>
         </Routes>
       </BrowserRouter>
