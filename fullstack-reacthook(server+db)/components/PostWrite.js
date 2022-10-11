@@ -4,15 +4,16 @@ import "../css/PostWrite.css";
 // react로 글쓰기 영역 만들기 참고!
 // https://blog.naver.com/PostView.naver?blogId=sejun3278&logNo=221806719514&redirect=Dlog&widgetTypeCall=true&directAccess=false
 // https://jaypedia.tistory.com/150
+// https://ymkmoon.github.io/React-08-Voc-Post-Question/
 
 function PostWrite(props){
 
   const [title, setTitle] = useState('')
   const [contents, setContents] = useState('')
 
-  const addPostInfo=()=>{
+  const enrollPost=()=>{
     alert("글 추가!")
-    props.addPostInfo(title, contents)
+    props.enrollPost(title, contents)
   }
 
     return(
@@ -25,7 +26,7 @@ function PostWrite(props){
               내용 <textarea placeholder="내용" onChange={(e)=>setContents(e.target.value)}></textarea>
             </div>
             <div id="submit-btn">
-              <button onClick={addPostInfo}>등록</button>
+              <button onClick={enrollPost}>등록</button>
             </div>
         </div>
     )
