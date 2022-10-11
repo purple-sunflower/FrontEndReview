@@ -10,12 +10,11 @@ function Post(props){
     return(
         <div id="post">
             <span>{props.no}</span> 
-            <span><Link to='/postView' id="postview_title">{props.title}</Link></span>
+            <span><Link to={`/postView?no=${props.no}`} id="postview_title">{props.title}</Link></span>
             <span>{props.author}</span>
             <span>{moment(props.date).format("YYYY-MM-DD")}</span>
             <span>{props.attach}</span>
             <span>{props.hits}</span>
-            <span>{props.contents}</span>
         </div>
     )
 }
