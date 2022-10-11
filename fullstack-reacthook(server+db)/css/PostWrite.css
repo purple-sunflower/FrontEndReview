@@ -1,5 +1,16 @@
 #postwrite{
     width: 1000px;
     height: 1000px;
-    background-color: aqua;
+    background-color: lightcyan;
 }
+
+#postwrite>#title-area>input{
+    width: 800px;
+    height: 50px;
+}
+
+#postwrite>#contents-area>textarea{
+    width: 800px;
+    height: 400px;
+}
+

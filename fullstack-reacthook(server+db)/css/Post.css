@@ -39,10 +39,6 @@
     background-color: lightcoral;
 }
 
-#post>span:last-child{
-    display: inline;
-}
-
 #postview_title{
     text-decoration: none;
     color: black;
