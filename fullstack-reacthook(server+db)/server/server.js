@@ -34,17 +34,21 @@ app.get('/board/:no',(req,res)=>{
     })
 })
 
-//추가
-// app.post('/board/add/:no',(req,res)=>{
-//     console.log('/board')
-//     db.query("select * from board",(err,data)=>{
-//         if(!err){
-//             res.send(data)
-//         }else{
-//             console.log(err)
-//         }
-//     })
-// })
+// 추가
+app.post('/board/add/:title&contents',(req,res)=>{
+    console.log('/board/add/:title&contents')
+    const title = req.params.title
+    const contents = req.params.contents
+    // 숫자는 그 전 게시물 +1, 날짜는 오늘 날짜 들어가게..
+    db.query(`insert into board (no, title, contents, author, date, attach, hits) 
+    values(22,"${title}","${contents}", "관리자", 20220926, 0, 0);`,(err,data)=>{
+        if(!err){
+            res.send(data)
+        }else{
+            console.log(err)
+        }
+    })
+})
 
 //수정
 // app.update('/board',(req,res)=>{
@@ -58,17 +62,18 @@ app.get('/board/:no',(req,res)=>{
 //     })
 // })
 
-// 삭제
-// app.delete('/board',(req,res)=>{
-//     console.log('/board')
-//     db.query("select * from board",(err,data)=>{
-//         if(!err){
-//             res.send(data)
-//         }else{
-//             console.log(err)
-//         }
-//     })
-// })
+//삭제
+app.delete('/board/delete/:no',(req,res)=>{
+    console.log('/board/delete/:no')
+    const no = req.params.no
+    db.query(`delete from board where no=${no}`,(err,data)=>{
+        if(!err){
+            res.send(data)
+        }else{
+            console.log(err)
+        }
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`Server On : http://localhost:${PORT}/`);
