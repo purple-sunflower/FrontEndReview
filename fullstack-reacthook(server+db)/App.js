@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import PostMain from './components/PostMain.js'
@@ -25,25 +24,25 @@ function App() {
     alert("title: " + title)
     alert("contents: "+ contents)
     let myDate = new Date()
-    let year = myDate.getFullYear()
-    let month = myDate.getMonth()+1
-    let day= myDate.getDate()
+    // let year = myDate.getFullYear()
+    // let month = myDate.getMonth()+1
+    // let day= myDate.getDate()
 
-    if(month<10){
-      month="0"+month
-    }
-    if(day<10){
-      day="0"+day
-    }
+    // if(month<10){
+    //   month="0"+month
+    // }
+    // if(day<10){
+    //   day="0"+day
+    // }
 
-    let regDate = year+"-"+month+"-"+day
-    const post = {title:title, contents:contents, author:'관리자', date:regDate}
+    // let regDate = year+"-"+month+"-"+day
+    const post = {title:title, contents:contents, author:'관리자', date:myDate}
     axiosEnrollPost(post)
   }
 
-  const axiosEnrollPost = async(writePost) => {
-    const res = await axios.post('/board/add/', writePost)
-    console.log('추가결과', res)
+  const axiosEnrollPost = async(post) => {
+    const res = await axios.post('/post/add/' + post)
+    console.log('추가 결과', res)
   }
 
   return (
