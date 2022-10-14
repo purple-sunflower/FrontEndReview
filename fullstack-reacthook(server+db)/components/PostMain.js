@@ -13,11 +13,11 @@ import {Link} from 'react-router-dom';
 
 function PostMain() {
 
-  let [postList, setPostList] = useState([]);
+  const [postList, setPostList] = useState([]);
 
   useEffect(()=>{
     const getPosts = async() =>{
-      const result = await axios.get('/board')
+      const result = await axios.get('/post')
       setPostList(result.data)
     }
     getPosts();

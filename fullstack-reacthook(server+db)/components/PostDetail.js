@@ -5,17 +5,21 @@ import queryString from 'query-string'
 import { useEffect, useState } from "react";
 import "../css/PostDetail.css";
 
-
 function PostDetail(props){
     // 삭제
     const [filterList, setFilterList] = useState([])
+    const [edit, setEdit] = useState(false)
+    const [updateList, setUpdateList] = useState([])
+    // const [title, setTitle] = useState(props.title)
+    // const [contents, setContents] = useState(props.contents)
+    // const [no, setNo] = useState(props.no)
 
     const deletePost = async() =>{
         alert("삭제")
         const queryObj = queryString.parse(window.location.search) // {no:22}
         const deleteNo = queryObj.no
-        const result = await axios.delete(`/board/delete/${deleteNo}`)
-        const filterList = result.filter(
+        const result = await axios.delete(`/post/delete/${deleteNo}`)
+        filterList = result.filter(
             (data) => (data.no != deleteNo)
         )
         setFilterList(filterList)
@@ -38,10 +42,27 @@ function PostDetail(props){
     //     const res = null
     //   }
 
+    const updatePost=async()=>{
+        alert("수정")
+        const queryObj = queryString.parse(window.location.search) // {no:22}
+        const updateNo = queryObj.no
+        const updateTitle = queryObj.title
+        const updateContents = queryObj.contents
+        const result = await axios.update(`/post/update/${updateNo}`)
+        if(edit===false){
+            updateList = result.map(
+                (data) => (data.no==updateNo)?({...data, title:updateTitle, contents:updateContents}):data
+            )
+            setUpdateList(updateList)
+        }
+        setEdit(!edit)
+    }
+
+
     return(
         <div id="postdetail">
            <button onClick={deletePost}>삭제</button>
-           <button>수정</button>
+           <button onClick={updatePost}>수정</button>
         </div>
     )
 }

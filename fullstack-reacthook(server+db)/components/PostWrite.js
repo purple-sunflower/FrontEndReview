@@ -8,8 +8,8 @@ import "../css/PostWrite.css";
 
 function PostWrite(props){
 
-  const [title, setTitle] = useState('')
-  const [contents, setContents] = useState('')
+  const [title, setTitle] = useState(props.title)
+  const [contents, setContents] = useState(props.contents)
 
   const enrollPost=()=>{
     alert("글 추가!")
