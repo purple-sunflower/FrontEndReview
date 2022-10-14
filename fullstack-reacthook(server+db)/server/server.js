@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 2000;
 const db = require('./config/db.js')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -10,9 +10,9 @@ app.get('/hello',(req,res)=>{
 })
 
 // 전체 조회
-app.get('/board',(req,res)=>{
-    console.log('/board')
-    db.query("select * from board",(err,data)=>{
+app.get('/post',(req,res)=>{
+    console.log('/post')
+    db.query("select * from post",(err,data)=>{
         if(!err){
             res.send(data)
         }else{
@@ -22,10 +22,10 @@ app.get('/board',(req,res)=>{
 })
 
 // 조건 조회
-app.get('/board/:no',(req,res)=>{
-    console.log('/board/:no')
+app.get('/post/:no',(req,res)=>{
+    console.log('/post/:no')
     const no = req.params.no
-    db.query(`select * from board where no=${no}`,(err,data)=>{
+    db.query(`select * from post where no=${no}`,(err,data)=>{
         if(!err){
             res.send(data)
         }else{
@@ -34,14 +34,17 @@ app.get('/board/:no',(req,res)=>{
     })
 })
 
+
 // 추가
-app.post('/board/add/:title&contents',(req,res)=>{
-    console.log('/board/add/:title&contents')
-    const title = req.params.title
-    const contents = req.params.contents
+app.post('/post/add/' ,(req,res)=>{
+    console.log('/post/add/')
+    // const title = req.params.title
+    // const contents = req.params.contents
+    // const author = req.params.author
+    // const date = req.params.date
     // 숫자는 그 전 게시물 +1, 날짜는 오늘 날짜 들어가게..
-    db.query(`insert into board (no, title, contents, author, date, attach, hits) 
-    values(22,"${title}","${contents}", "관리자", 20220926, 0, 0);`,(err,data)=>{
+    db.query(`insert into post (no, title, contents, author, date, attach, hits) 
+    values(23,"${title}","${contents}", "${author}", ${date}, 0, 0);`,(err,data)=>{
         if(!err){
             res.send(data)
         }else{
@@ -51,22 +54,25 @@ app.post('/board/add/:title&contents',(req,res)=>{
 })
 
 //수정
-// app.update('/board',(req,res)=>{
-//     console.log('/board')
-//     db.query("select * from board",(err,data)=>{
-//         if(!err){
-//             res.send(data)
-//         }else{
-//             console.log(err)
-//         }
-//     })
-// })
+app.put('/post/update/:no&:title:&:contents',(req,res)=>{
+    console.log('/post/update/:no&:title:&:contents')
+    const no = req.params.no
+    const title = req.params.title
+    const contents = req.params.contents
+    db.query(`update post set title=${title}, contents=${contents} where no=${no}`,(err,data)=>{
+        if(!err){
+            res.send(data)
+        }else{
+            console.log(err)
+        }
+    })
+})
 
 //삭제
-app.delete('/board/delete/:no',(req,res)=>{
-    console.log('/board/delete/:no')
+app.delete('/post/delete/:no',(req,res)=>{
+    console.log('/post/delete/:no')
     const no = req.params.no
-    db.query(`delete from board where no=${no}`,(err,data)=>{
+    db.query(`delete from post where no=${no}`,(err,data)=>{
         if(!err){
             res.send(data)
         }else{
