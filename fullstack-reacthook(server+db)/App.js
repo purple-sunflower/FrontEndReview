@@ -5,6 +5,7 @@ import PostWrite from './components/PostWrite.js'
 import PostView from './components/PostView.js'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import {createBrowserHistory} from "history";
 
 // 번호, 제목, 작성자, 등록일, 첨부, 조회 , (글 내용)
 // no, title, author, date, , hits, contents
@@ -24,26 +25,28 @@ function App() {
     alert("title: " + title)
     alert("contents: "+ contents)
     let myDate = new Date()
-    // let year = myDate.getFullYear()
-    // let month = myDate.getMonth()+1
-    // let day= myDate.getDate()
+     let year = myDate.getFullYear()
+     let month = myDate.getMonth()+1
+     let day= myDate.getDate()
 
-    // if(month<10){
-    //   month="0"+month
-    // }
-    // if(day<10){
-    //   day="0"+day
-    // }
+     if(month<10){
+       month="0"+month
+     }
+     if(day<10){
+       day="0"+day
+     }
 
-    // let regDate = year+"-"+month+"-"+day
-    const post = {title:title, contents:contents, author:'관리자', date:myDate}
+     let regDate = year+"-"+month+"-"+day
+    const post = {title:title, contents:contents, author:'관리자', date:regDate}
     axiosEnrollPost(post)
   }
 
   const axiosEnrollPost = async(post) => {
-    const res = await axios.post('/post/add/' + post)
+    const res = await axios.post('/post/add/', post)
     console.log('추가 결과', res)
   }
+
+  const history = createBrowserHistory()
 
   return (
     <div id='app'>
