@@ -35,16 +35,14 @@ app.get('/post/:no',(req,res)=>{
 })
 
 
-// 추가
-app.post('/post/add/' ,(req,res)=>{
+// 추가 (성공 but 새로운 글이 맨 위에 추가되도록..?)
+app.post('/post/add/',(req,res)=>{
     console.log('/post/add/')
-    // const title = req.params.title
-    // const contents = req.params.contents
-    // const author = req.params.author
-    // const date = req.params.date
-    // 숫자는 그 전 게시물 +1, 날짜는 오늘 날짜 들어가게..
+    const {title, contents, author, date} = req.body // req.*****body******
+    // 숫자는 그 전 게시물 +1 (이거 구현 해야함 ㅠㅠㅠ ) 
+    // 날짜는 오늘 날짜 들어가게.. (App에서 myDate 사용)
     db.query(`insert into post (no, title, contents, author, date, attach, hits) 
-    values(23,"${title}","${contents}", "${author}", ${date}, 0, 0);`,(err,data)=>{
+    values(23,"${title}","${contents}", "${author}", "${date}", 0, 0);`,(err,data)=>{
         if(!err){
             res.send(data)
         }else{
@@ -54,19 +52,19 @@ app.post('/post/add/' ,(req,res)=>{
 })
 
 //수정
-app.put('/post/update/:no&:title:&:contents',(req,res)=>{
-    console.log('/post/update/:no&:title:&:contents')
-    const no = req.params.no
-    const title = req.params.title
-    const contents = req.params.contents
-    db.query(`update post set title=${title}, contents=${contents} where no=${no}`,(err,data)=>{
-        if(!err){
-            res.send(data)
-        }else{
-            console.log(err)
-        }
-    })
-})
+// app.put('/post/update/:no&:title:&:contents',(req,res)=>{
+//     console.log('/post/update/:no&:title:&:contents')
+//     const no = req.params.no
+//     const title = req.params.title
+//     const contents = req.params.contents
+//     db.query(`update post set title=${title}, contents=${contents} where no=${no}`,(err,data)=>{
+//         if(!err){
+//             res.send(data)
+//         }else{
+//             console.log(err)
+//         }
+//     })
+// })
 
 //삭제
 app.delete('/post/delete/:no',(req,res)=>{
