@@ -8,8 +8,8 @@ import "../css/PostWrite.css";
 
 function PostWrite(props){
 
-  const [title, setTitle] = useState(props.title)
-  const [contents, setContents] = useState(props.contents)
+  const [title, setTitle] = useState("")
+  const [contents, setContents] = useState("")
 
   const enrollPost=()=>{
     alert("글 추가!")
@@ -23,7 +23,7 @@ function PostWrite(props){
               제목 <input type="text" placeholder="제목" onChange={(e)=>setTitle(e.target.value)}/>
             </div>
             <div id="contents-area">
-              내용 <textarea placeholder="내용" onChange={(e)=>setContents(e.target.value)}></textarea>
+              내용 <textarea placeholder="내용" onChange={(e)=>setContents(e.target.value)}/>
             </div>
             <div id="submit-btn">
               <button onClick={enrollPost}>등록</button>
