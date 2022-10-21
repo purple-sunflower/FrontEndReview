@@ -9,10 +9,10 @@ app.get('/hello',(req,res)=>{
     console.log('/hello')
 })
 
-// 전체 조회
+// 전체 조회 (날짜를 기준으로 내림차순 -> 최신 등록글이 맨 위로 오도록)
 app.get('/post',(req,res)=>{
     console.log('/post')
-    db.query("select * from post",(err,data)=>{
+    db.query("select * from post order by date desc",(err,data)=>{
         if(!err){
             res.send(data)
         }else{
@@ -35,14 +35,14 @@ app.get('/post/:no',(req,res)=>{
 })
 
 
-// 추가 (성공 but 새로운 글이 맨 위에 추가되도록..?)
+// 추가
 app.post('/post/add/',(req,res)=>{
     console.log('/post/add/')
     const {title, contents, author, date} = req.body // req.*****body******
     // 숫자는 그 전 게시물 +1 (이거 구현 해야함 ㅠㅠㅠ ) 
     // 날짜는 오늘 날짜 들어가게.. (App에서 myDate 사용)
     db.query(`insert into post (no, title, contents, author, date, attach, hits) 
-    values(23,"${title}","${contents}", "${author}", "${date}", 0, 0);`,(err,data)=>{
+    values(24,"${title}","${contents}", "${author}", "${date}", 0, 0);`,(err,data)=>{
         if(!err){
             res.send(data)
         }else{
