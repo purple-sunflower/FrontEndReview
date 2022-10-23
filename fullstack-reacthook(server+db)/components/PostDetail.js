@@ -42,16 +42,15 @@ function PostDetail(props){
     //     const res = null
     //   }
 
-    const updatePost=async()=>{
+    const updatePost=async()=>{ // 잘 몰겠음 ㅠ
         alert("수정")
         const queryObj = queryString.parse(window.location.search) // {no:22}
         const updateNo = queryObj.no
-        const updateTitle = queryObj.title
-        const updateContents = queryObj.contents
-        const result = await axios.update(`/post/update/${updateNo}`)
+        const {title, contents} = this.state
+        const result = await axios.put(`/post/update/${updateNo}`)
         if(edit===false){
             updateList = result.map(
-                (data) => (data.no==updateNo)?({...data, title:updateTitle, contents:updateContents}):data
+                (data) => (data.no==updateNo)?({...data, title:title, contents:contents}):data
             )
             setUpdateList(updateList)
         }
