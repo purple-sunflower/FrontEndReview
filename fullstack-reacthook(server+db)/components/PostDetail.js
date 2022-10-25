@@ -10,8 +10,8 @@ function PostDetail(props){
     const [filterList, setFilterList] = useState([])
     const [edit, setEdit] = useState(false)
     const [updateList, setUpdateList] = useState([])
-    // const [title, setTitle] = useState(props.title)
-    // const [contents, setContents] = useState(props.contents)
+    // const [title, setTitle] = useState("")
+    // const [contents, setContents] = useState("")
     // const [no, setNo] = useState(props.no)
 
     const deletePost = async() =>{
@@ -23,6 +23,7 @@ function PostDetail(props){
             (data) => (data.no != deleteNo)
         )
         setFilterList(filterList)
+        window.location.href="/"
       }
 
     //   const deletePost=async()=>{
@@ -46,9 +47,8 @@ function PostDetail(props){
         alert("수정")
         const queryObj = queryString.parse(window.location.search) // {no:22}
         const updateNo = queryObj.no
-        const {title, contents} = this.state
         const result = await axios.put(`/post/update/${updateNo}`)
-        if(edit===false){
+        if(edit===true){
             updateList = result.map(
                 (data) => (data.no==updateNo)?({...data, title:title, contents:contents}):data
             )
