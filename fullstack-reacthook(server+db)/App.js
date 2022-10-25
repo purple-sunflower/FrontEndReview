@@ -3,6 +3,7 @@ import './App.css';
 import PostMain from './components/PostMain.js'
 import PostWrite from './components/PostWrite.js'
 import PostView from './components/PostView.js'
+import Footer from './components/Footer.js'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import {createBrowserHistory} from "history";
@@ -57,6 +58,7 @@ function App() {
           <Route path='/postView' element={<PostView/>}/>
         </Routes>
       </BrowserRouter>
+      <Footer></Footer>
     </div>
     
   );
