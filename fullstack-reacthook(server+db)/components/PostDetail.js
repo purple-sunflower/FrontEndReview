@@ -26,14 +26,6 @@ function PostDetail(props){
         window.location.href="/"
       }
 
-    //   const deletePost=async()=>{
-    //   alert("삭제")
-    //   const deleteNo = props.deleteNo
-    //   const res = await axios.delete(`/board/delete/${deleteNo}`)
-    //   window.location.href="/"
-    //   }
-
-
     // 수정
     //   updatePost=async()=>{
     //     alert("수정")
@@ -47,6 +39,7 @@ function PostDetail(props){
         alert("수정")
         const queryObj = queryString.parse(window.location.search) // {no:22}
         const updateNo = queryObj.no
+        const res = null
         const result = await axios.put(`/post/update/${updateNo}`)
         if(edit===true){
             updateList = result.map(

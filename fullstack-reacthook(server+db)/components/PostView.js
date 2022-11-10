@@ -10,7 +10,8 @@ import PostDetail from './PostDetail.js';
 function PostView(props){
 
     const [postContents, setPostContents] = useState([])
-    
+    const [edit, setEdit] = useState(false)
+
     useEffect(()=>{
         const queryObj = queryString.parse(window.location.search) // {no:22}
         const searchNo = queryObj.no
@@ -22,24 +23,24 @@ function PostView(props){
         setPostContents(result.data[0])
     }
 
-        return(
-            <div id="postview">
-                <PostDetail/>
-                <div id="info">
-                    <div>{postContents.no} </div>
-                    <div>날짜: {postContents.date} </div>
-                    <div>작성자: {postContents.author} </div>
-                    <div>첨부: {postContents.attach} </div>
-                    <div>조회수: {postContents.hits} </div>
-                </div>
-                <div id="title-area">
-                    제목: {postContents.title}
-                </div>
-                <div id="contents-area">
-                    {postContents.contents}
-                </div>
+    return(
+        <div id="postview">
+            <PostDetail/>
+            <div id="info">
+                <div>{postContents.no} </div>
+                <div>날짜: {postContents.date} </div>
+                <div>작성자: {postContents.author} </div>
+                <div>첨부: {postContents.attach} </div>
+                <div>조회수: {postContents.hits} </div>
             </div>
-        )
+            <div id="title-area">
+                제목: {postContents.title}
+            </div>
+            <div id="contents-area">
+                {postContents.contents}
+            </div>
+        </div>
+    )
     }
 
 export default PostView;
