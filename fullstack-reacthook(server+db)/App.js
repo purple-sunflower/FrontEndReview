@@ -58,7 +58,6 @@ function App() {
           <Route path='/postView' element={<PostView/>}/>
         </Routes>
       </BrowserRouter>
-      <Footer></Footer>
     </div>
     
   );
