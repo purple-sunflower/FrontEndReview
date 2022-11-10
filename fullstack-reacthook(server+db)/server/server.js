@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 2000;
 const db = require('./config/db.js')
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { prependOnceListener } = require('./config/db.js');
 app.use(bodyParser.json())
 
 app.get('/hello',(req,res)=>{
@@ -51,20 +52,21 @@ app.post('/post/add/',(req,res)=>{
     })
 })
 
-//수정
-// app.put('/post/update/:no&:title:&:contents',(req,res)=>{
-//     console.log('/post/update/:no&:title:&:contents')
-//     const no = req.params.no
-//     const title = req.params.title
-//     const contents = req.params.contents
-//     db.query(`update post set title=${title}, contents=${contents} where no=${no}`,(err,data)=>{
-//         if(!err){
-//             res.send(data)
-//         }else{
-//             console.log(err)
-//         }
-//     })
-// })
+//수정 (수정 눌렀을 때, title과 contents에 수정된 내용 들어가도록!)
+app.put('/post/update/:no',(req,res)=>{
+    console.log('/post/update/:no')
+    const no = req.params.no
+    const title = "수정 제목"
+    const contents = "수정 내용"
+    // const {title, contents} = req.body
+    db.query(`update post set title="${title}", contents="${contents}" where no=${no}`,(err,data)=>{
+        if(!err){
+            res.send(data)
+        }else{
+            console.log(err)
+        }
+    })
+})
 
 //삭제
 app.delete('/post/delete/:no',(req,res)=>{
