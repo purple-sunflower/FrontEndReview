@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>if와 문자열 0</title>
+    <title>'if'를 '?'로 교체하기</title>
 </head>
 <body>
     <script>
-        if("0"){
-            alert('Hello!');
-        }
-        // 문자열 0운 true -> 실행
+        let a = prompt("a의 값 입력", 0);
+        let b = prompt("b의 값 입력", 0);
+        let result = (+a + +b < 4) ? '미만' : '이상';
+        alert(result)
     </script>
 </body>
 </html>
