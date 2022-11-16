@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>다음 OR 연산의 결과는 무엇일까요?</title>
+    <title>다음 AND 연산의 결과는 무엇일까요?</title>
 </head>
 <body>
     <script>
-        alert( null || 2 || undefined ); 
-        // ** 2 (첫번째 truthy 반환)
+        alert( 1 && null && 2 );
+        // 첫번째 falsy 값인 null 출력
     </script>
 </body>
 </html>
