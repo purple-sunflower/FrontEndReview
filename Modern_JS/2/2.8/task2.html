@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전위형과 후위형</title>
+    <title>할당 후 결과 예측하기</title>
 </head>
 <body>
     <script>
-        let a = 1, b = 1;
+        let a = 2;
 
-        let c = ++a; 
-        let d = b++; 
-        // a = 2, b = 2 , c = 2 , d = 1 
+        let x = 1 + (a *= 2);
 
-        alert("a: "+ a)
-        alert("b: "+ b)
-        alert("c: "+ c)
-        alert("d: "+ d)
+        alert("a: " + a + " , x: " + x)
+        // a: 4, x: 5
     </script>
 </body>
 </html>
